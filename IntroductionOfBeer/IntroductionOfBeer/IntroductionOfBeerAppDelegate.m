@@ -2,9 +2,9 @@
 //  IntroductionOfBeerAppDelegate.m
 //  IntroductionOfBeer
 //
-//  Created by 秀典 細野 on 11/09/02.
+//  Created by Amatsu on 11/09/02.
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
-//　テスト
+//　日本語テスト
 
 #import "IntroductionOfBeerAppDelegate.h"
 
