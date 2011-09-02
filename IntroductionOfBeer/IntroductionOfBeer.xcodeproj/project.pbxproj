@@ -46,7 +46,7 @@
 		015663AF141123DB00E976C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		015663B1141123DB00E976C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		015663B3141123DB00E976C5 /* IntroductionOfBeer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntroductionOfBeer-Prefix.pch"; sourceTree = "<group>"; };
-		015663B4141123DB00E976C5 /* IntroductionOfBeerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroductionOfBeerAppDelegate.h; sourceTree = "<group>"; };
+		015663B4141123DB00E976C5 /* IntroductionOfBeerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionOfBeerAppDelegate.h; sourceTree = "<group>"; };
 		015663B5141123DB00E976C5 /* IntroductionOfBeerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroductionOfBeerAppDelegate.m; sourceTree = "<group>"; };
 		015663B8141123DB00E976C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		015663BA141123DB00E976C5 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
@@ -458,6 +458,7 @@
 				015663E1141123DB00E976C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		015663E2141123DB00E976C5 /* Build configuration list for PBXNativeTarget "IntroductionOfBeerTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +467,7 @@
 				015663E4141123DB00E976C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

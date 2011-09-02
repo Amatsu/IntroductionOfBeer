@@ -2,9 +2,8 @@
 //  IntroductionOfBeerAppDelegate.h
 //  IntroductionOfBeer
 //
-//  Created by Amatsu on 11/09/02.
-//  Copyright 2011”N __MyCompanyName__. All rights reserved.
-//  update by ƒeƒXƒg“ú–{Œê
+//  Created by ç§€å…¸ ç´°é‡Ž on 11/09/02.
+//  Copyright 2011å¹´ __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
