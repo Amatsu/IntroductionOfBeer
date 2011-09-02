@@ -3,8 +3,8 @@
 //  IntroductionOfBeer
 //
 //  Created by Amatsu on 11/09/02.
-//  Copyright 2011蟷ｴ __MyCompanyName__. All rights reserved.
-//  update by asaake2
+//  Copyright 2011年 __MyCompanyName__. All rights reserved.
+//  update by テスト日本語
 //
 
 #import <UIKit/UIKit.h>
