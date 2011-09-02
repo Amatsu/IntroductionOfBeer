@@ -5,6 +5,7 @@
 //  Created by Amatsu on 11/09/02.
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //　日本語テスト
+//　日本語テスト２
 
 #import "IntroductionOfBeerAppDelegate.h"
 
