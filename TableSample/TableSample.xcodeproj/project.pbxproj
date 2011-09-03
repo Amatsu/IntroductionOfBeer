@@ -23,6 +23,8 @@
 		0121B58C1411EC5A00982E4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0121B58A1411EC5A00982E4A /* InfoPlist.strings */; };
 		0121B58E1411EC5A00982E4A /* TableSampleTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 0121B58D1411EC5A00982E4A /* TableSampleTests.h */; };
 		0121B5901411EC5A00982E4A /* TableSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121B58F1411EC5A00982E4A /* TableSampleTests.m */; };
+		0121B5A11411F5A600982E4A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121B59F1411F5A600982E4A /* DetailViewController.m */; };
+		0121B5A21411F5A600982E4A /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0121B5A01411F5A600982E4A /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		0121B58B1411EC5A00982E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0121B58D1411EC5A00982E4A /* TableSampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableSampleTests.h; sourceTree = "<group>"; };
 		0121B58F1411EC5A00982E4A /* TableSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableSampleTests.m; sourceTree = "<group>"; };
+		0121B59E1411F5A600982E4A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		0121B59F1411F5A600982E4A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0121B5A01411F5A600982E4A /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +128,9 @@
 				0121B5751411EC5A00982E4A /* RootViewController.m */,
 				0121B5771411EC5A00982E4A /* RootViewController.xib */,
 				0121B5661411EC5A00982E4A /* Supporting Files */,
+				0121B59E1411F5A600982E4A /* DetailViewController.h */,
+				0121B59F1411F5A600982E4A /* DetailViewController.m */,
+				0121B5A01411F5A600982E4A /* DetailViewController.xib */,
 			);
 			path = TableSample;
 			sourceTree = "<group>";
@@ -227,6 +235,7 @@
 				0121B56A1411EC5A00982E4A /* InfoPlist.strings in Resources */,
 				0121B5731411EC5A00982E4A /* MainWindow.xib in Resources */,
 				0121B5791411EC5A00982E4A /* RootViewController.xib in Resources */,
+				0121B5A21411F5A600982E4A /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +274,7 @@
 				0121B56C1411EC5A00982E4A /* main.m in Sources */,
 				0121B5701411EC5A00982E4A /* TableSampleAppDelegate.m in Sources */,
 				0121B5761411EC5A00982E4A /* RootViewController.m in Sources */,
+				0121B5A11411F5A600982E4A /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

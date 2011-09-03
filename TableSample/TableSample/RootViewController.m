@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "DetailViewController.h"
 
 @implementation RootViewController
 
@@ -139,6 +140,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    DetailViewController *detailViewController = [DetailViewController alloc];
+
+    // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
+
+    
+    //選択をおこなった行番号が取得できる。
+    //番号を元に別のViewをpush（呼び出す）
+    if(indexPath.section == 0){
+        
+    }else if(indexPath.section == 1){
+            
+    }
+
     /*
     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
     // ...
