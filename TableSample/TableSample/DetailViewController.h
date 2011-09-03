@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
-
+@interface DetailViewController : UIViewController{
+    IBOutlet UIScrollView *scrollView;  
+    IBOutlet UIPageControl *pageControl;
+}
 @end

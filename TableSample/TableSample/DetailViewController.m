@@ -33,7 +33,29 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+        
+    scrollView.pagingEnabled = YES;
+    scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * 3, scrollView.frame.size.height);
+    scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.showsVerticalScrollIndicator = NO;
+    
+    pageControl.numberOfPages = 3;  
+    pageControl.currentPage = 0; 
+    
 }
+
+- (IBAction)changePage:(id)sender {  
+    CGRect frame = scrollView.frame;  
+    frame.origin.x = frame.size.width * pageControl.currentPage;  
+    frame.origin.y = 0;  
+    [scrollView scrollRectToVisible:frame animated:YES];  
+}  
+
+- (void)scrollViewDidScroll:(UIScrollView *)sender {
+	CGFloat pageWidth = scrollView.frame.size.width;
+	pageControl.currentPage = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+} 
+
 
 - (void)viewDidUnload
 {
