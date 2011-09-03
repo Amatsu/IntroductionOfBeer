@@ -53,8 +53,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //一度に表示する行数
-    return 100;
+    //一度に表示する行数？
+    if(section == 0){
+        return 5;
+    }else if(section == 1){
+        return 3;
+    }
+    return 1;
+}
+
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    //第一セクションの場合
+    if(section == 0) {
+        //セクションのタイトルを変更
+        return @"iPhone names";
+    }else if(section == 1) {
+        return @"mac names";
+    }
+    
+    return nil;
 }
 
 // Customize the appearance of table view cells.
@@ -68,7 +86,11 @@
     }
     
     // Cellにtextを設定
-    cell.textLabel.text = @"test";
+    if(indexPath.section == 0){
+        cell.textLabel.text = @"section1";
+    }else if(indexPath.section == 1){
+        cell.textLabel.text = @"section2";
+    }
     
     // Configure the cell.
     return cell;
