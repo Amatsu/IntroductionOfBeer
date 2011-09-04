@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  SeachViewController.h
 //  TabBarSample
 //
 //  Created by Amatsu on 11/09/04.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface SeachViewController : UIViewController
 
 @end

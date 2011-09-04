@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  MainNaviController.h
 //  TabBarSample
 //
 //  Created by Amatsu on 11/09/04.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface MainNaviController : UINavigationController
 
 @end

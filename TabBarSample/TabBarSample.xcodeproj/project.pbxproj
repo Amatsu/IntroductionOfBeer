@@ -14,10 +14,6 @@
 		0121B5BF14130A1300982E4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121B5BE14130A1300982E4A /* main.m */; };
 		0121B5C314130A1300982E4A /* TabBarSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121B5C214130A1300982E4A /* TabBarSampleAppDelegate.m */; };
 		0121B5C614130A1300982E4A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0121B5C414130A1300982E4A /* MainWindow.xib */; };
-		0121B5C914130A1300982E4A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121B5C814130A1300982E4A /* FirstViewController.m */; };
-		0121B5CC14130A1300982E4A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121B5CB14130A1300982E4A /* SecondViewController.m */; };
-		0121B5CF14130A1300982E4A /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0121B5CD14130A1300982E4A /* FirstView.xib */; };
-		0121B5D214130A1300982E4A /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0121B5D014130A1300982E4A /* SecondView.xib */; };
 		0121B5DA14130A1300982E4A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0121B5D914130A1300982E4A /* SenTestingKit.framework */; };
 		0121B5DB14130A1300982E4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0121B5B214130A1300982E4A /* UIKit.framework */; };
 		0121B5DC14130A1300982E4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0121B5B414130A1300982E4A /* Foundation.framework */; };
@@ -25,6 +21,12 @@
 		0121B5E514130A1300982E4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0121B5E314130A1300982E4A /* InfoPlist.strings */; };
 		0121B5E714130A1300982E4A /* TabBarSampleTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 0121B5E614130A1300982E4A /* TabBarSampleTests.h */; };
 		0121B5E914130A1300982E4A /* TabBarSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121B5E814130A1300982E4A /* TabBarSampleTests.m */; };
+		0121B5FE1413107100982E4A /* SeachViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121B5FC1413107100982E4A /* SeachViewController.m */; };
+		0121B5FF1413107100982E4A /* SeachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0121B5FD1413107100982E4A /* SeachViewController.xib */; };
+		0121B604141311B900982E4A /* MainNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121B602141311B800982E4A /* MainNaviController.m */; };
+		0121B605141311B900982E4A /* MainNaviController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0121B603141311B800982E4A /* MainNaviController.xib */; };
+		0121B6091413129100982E4A /* ContentsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121B6071413129100982E4A /* ContentsTableController.m */; };
+		0121B60A1413129100982E4A /* ContentsTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0121B6081413129100982E4A /* ContentsTableController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,18 +51,21 @@
 		0121B5C114130A1300982E4A /* TabBarSampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarSampleAppDelegate.h; sourceTree = "<group>"; };
 		0121B5C214130A1300982E4A /* TabBarSampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarSampleAppDelegate.m; sourceTree = "<group>"; };
 		0121B5C514130A1300982E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		0121B5C714130A1300982E4A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		0121B5C814130A1300982E4A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		0121B5CA14130A1300982E4A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		0121B5CB14130A1300982E4A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		0121B5CE14130A1300982E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
-		0121B5D114130A1300982E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
 		0121B5D814130A1300982E4A /* TabBarSampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarSampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0121B5D914130A1300982E4A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0121B5E214130A1300982E4A /* TabBarSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TabBarSampleTests-Info.plist"; sourceTree = "<group>"; };
 		0121B5E414130A1300982E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0121B5E614130A1300982E4A /* TabBarSampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarSampleTests.h; sourceTree = "<group>"; };
 		0121B5E814130A1300982E4A /* TabBarSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarSampleTests.m; sourceTree = "<group>"; };
+		0121B5FB1413107100982E4A /* SeachViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeachViewController.h; sourceTree = "<group>"; };
+		0121B5FC1413107100982E4A /* SeachViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeachViewController.m; sourceTree = "<group>"; };
+		0121B5FD1413107100982E4A /* SeachViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeachViewController.xib; sourceTree = "<group>"; };
+		0121B601141311B800982E4A /* MainNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNaviController.h; sourceTree = "<group>"; };
+		0121B602141311B800982E4A /* MainNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNaviController.m; sourceTree = "<group>"; };
+		0121B603141311B800982E4A /* MainNaviController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainNaviController.xib; sourceTree = "<group>"; };
+		0121B6061413129100982E4A /* ContentsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentsTableController.h; sourceTree = "<group>"; };
+		0121B6071413129100982E4A /* ContentsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentsTableController.m; sourceTree = "<group>"; };
+		0121B6081413129100982E4A /* ContentsTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentsTableController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +129,15 @@
 				0121B5C114130A1300982E4A /* TabBarSampleAppDelegate.h */,
 				0121B5C214130A1300982E4A /* TabBarSampleAppDelegate.m */,
 				0121B5C414130A1300982E4A /* MainWindow.xib */,
-				0121B5C714130A1300982E4A /* FirstViewController.h */,
-				0121B5C814130A1300982E4A /* FirstViewController.m */,
-				0121B5CA14130A1300982E4A /* SecondViewController.h */,
-				0121B5CB14130A1300982E4A /* SecondViewController.m */,
-				0121B5CD14130A1300982E4A /* FirstView.xib */,
-				0121B5D014130A1300982E4A /* SecondView.xib */,
+				0121B601141311B800982E4A /* MainNaviController.h */,
+				0121B602141311B800982E4A /* MainNaviController.m */,
+				0121B603141311B800982E4A /* MainNaviController.xib */,
+				0121B6061413129100982E4A /* ContentsTableController.h */,
+				0121B6071413129100982E4A /* ContentsTableController.m */,
+				0121B6081413129100982E4A /* ContentsTableController.xib */,
+				0121B5FB1413107100982E4A /* SeachViewController.h */,
+				0121B5FC1413107100982E4A /* SeachViewController.m */,
+				0121B5FD1413107100982E4A /* SeachViewController.xib */,
 				0121B5B914130A1300982E4A /* Supporting Files */,
 			);
 			path = TabBarSample;
@@ -234,8 +242,9 @@
 			files = (
 				0121B5BD14130A1300982E4A /* InfoPlist.strings in Resources */,
 				0121B5C614130A1300982E4A /* MainWindow.xib in Resources */,
-				0121B5CF14130A1300982E4A /* FirstView.xib in Resources */,
-				0121B5D214130A1300982E4A /* SecondView.xib in Resources */,
+				0121B5FF1413107100982E4A /* SeachViewController.xib in Resources */,
+				0121B605141311B900982E4A /* MainNaviController.xib in Resources */,
+				0121B60A1413129100982E4A /* ContentsTableController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +282,9 @@
 			files = (
 				0121B5BF14130A1300982E4A /* main.m in Sources */,
 				0121B5C314130A1300982E4A /* TabBarSampleAppDelegate.m in Sources */,
-				0121B5C914130A1300982E4A /* FirstViewController.m in Sources */,
-				0121B5CC14130A1300982E4A /* SecondViewController.m in Sources */,
+				0121B5FE1413107100982E4A /* SeachViewController.m in Sources */,
+				0121B604141311B900982E4A /* MainNaviController.m in Sources */,
+				0121B6091413129100982E4A /* ContentsTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,22 +321,6 @@
 				0121B5C514130A1300982E4A /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		0121B5CD14130A1300982E4A /* FirstView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0121B5CE14130A1300982E4A /* en */,
-			);
-			name = FirstView.xib;
-			sourceTree = "<group>";
-		};
-		0121B5D014130A1300982E4A /* SecondView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0121B5D114130A1300982E4A /* en */,
-			);
-			name = SecondView.xib;
 			sourceTree = "<group>";
 		};
 		0121B5E314130A1300982E4A /* InfoPlist.strings */ = {
@@ -458,6 +452,7 @@
 				0121B5EE14130A1300982E4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0121B5EF14130A1300982E4A /* Build configuration list for PBXNativeTarget "TabBarSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +461,7 @@
 				0121B5F114130A1300982E4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
