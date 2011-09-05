@@ -119,8 +119,8 @@
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<reference ref="289192951"/>
-					<object class="IBUIViewController" id="672547023">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="524203033">
+					<object class="IBUIViewController" id="441484260">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="333714124">
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							<reference key="IBUITabBar" ref="795333663"/>
 							<int key="IBUISystemItemIdentifier">8</int>
@@ -151,7 +151,7 @@
 					<object class="NSMutableArray" key="IBUIItems">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<reference ref="732511013"/>
-						<reference ref="524203033"/>
+						<reference ref="333714124"/>
 					</object>
 					<reference key="IBUISelectedItem" ref="732511013"/>
 				</object>
@@ -220,7 +220,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="795333663"/>
 							<reference ref="289192951"/>
-							<reference ref="672547023"/>
+							<reference ref="441484260"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -273,17 +273,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">130</int>
-						<reference key="object" ref="672547023"/>
+						<reference key="object" ref="441484260"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="524203033"/>
+							<reference ref="333714124"/>
 						</object>
 						<reference key="parent" ref="1034742383"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">131</int>
-						<reference key="object" ref="524203033"/>
-						<reference key="parent" ref="672547023"/>
+						<reference key="object" ref="333714124"/>
+						<reference key="parent" ref="441484260"/>
 						<string key="objectName">Seach</string>
 					</object>
 				</object>
