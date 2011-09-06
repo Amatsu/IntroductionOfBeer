@@ -34,6 +34,7 @@
 		0176F7921416491300018748 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F78D1416491300018748 /* FMDatabase.m */; };
 		0176F7931416491300018748 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F78F1416491300018748 /* FMDatabaseAdditions.m */; };
 		0176F7941416491300018748 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F7911416491300018748 /* FMResultSet.m */; };
+		0176F79B141654B200018748 /* BeerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F79A141654B200018748 /* BeerCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		0176F78F1416491300018748 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		0176F7901416491300018748 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		0176F7911416491300018748 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		0176F799141654B200018748 /* BeerCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerCategory.h; sourceTree = "<group>"; };
+		0176F79A141654B200018748 /* BeerCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,14 +150,12 @@
 		0176F712141635F400018748 /* BelgianBeer */ = {
 			isa = PBXGroup;
 			children = (
+				0176F79D1416584B00018748 /* View */,
+				0176F79C1416583500018748 /* Entity */,
 				0176F78B141648EC00018748 /* lib */,
-				0176F7811416421500018748 /* MainListView */,
 				0176F71B141635F400018748 /* BelgianBeerAppDelegate.h */,
 				0176F71C141635F400018748 /* BelgianBeerAppDelegate.m */,
 				0176F71E141635F400018748 /* MainWindow.xib */,
-				0176F7501416372A00018748 /* FavoriteViewController.h */,
-				0176F7511416372A00018748 /* FavoriteViewController.m */,
-				0176F7521416372A00018748 /* FavoriteViewController.xib */,
 				0176F713141635F400018748 /* Supporting Files */,
 			);
 			path = BelgianBeer;
@@ -225,6 +226,34 @@
 				0176F7911416491300018748 /* FMResultSet.m */,
 			);
 			name = lib;
+			sourceTree = "<group>";
+		};
+		0176F79C1416583500018748 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				0176F799141654B200018748 /* BeerCategory.h */,
+				0176F79A141654B200018748 /* BeerCategory.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		0176F79D1416584B00018748 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0176F79E1416586F00018748 /* FavoriteView */,
+				0176F7811416421500018748 /* MainListView */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0176F79E1416586F00018748 /* FavoriteView */ = {
+			isa = PBXGroup;
+			children = (
+				0176F7501416372A00018748 /* FavoriteViewController.h */,
+				0176F7511416372A00018748 /* FavoriteViewController.m */,
+				0176F7521416372A00018748 /* FavoriteViewController.xib */,
+			);
+			name = FavoriteView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +374,7 @@
 				0176F7921416491300018748 /* FMDatabase.m in Sources */,
 				0176F7931416491300018748 /* FMDatabaseAdditions.m in Sources */,
 				0176F7941416491300018748 /* FMResultSet.m in Sources */,
+				0176F79B141654B200018748 /* BeerCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

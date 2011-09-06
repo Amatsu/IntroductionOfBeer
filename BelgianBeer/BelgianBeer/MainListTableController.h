@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/NSArray.h>
 
 @interface MainListTableController : UITableViewController
 
