@@ -1,5 +1,5 @@
 //
-//  ContentsNaviController.h
+//  MainListTableController.h
 //  BelgianBeer
 //
 //  Created by Amatsu on 11/09/06.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContentsNaviController : UINavigationController{
-    IBOutlet UITableView* contentsList;
-}
+@interface MainListTableController : UITableViewController
 
 @end

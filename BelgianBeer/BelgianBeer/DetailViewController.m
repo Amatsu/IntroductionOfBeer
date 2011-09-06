@@ -1,14 +1,14 @@
 //
-//  ContentsNaviController.m
+//  DetailViewController.m
 //  BelgianBeer
 //
 //  Created by Amatsu on 11/09/06.
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "ContentsNaviController.h"
+#import "DetailViewController.h"
 
-@implementation ContentsNaviController
+@implementation DetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

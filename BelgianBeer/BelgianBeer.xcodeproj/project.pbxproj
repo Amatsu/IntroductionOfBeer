@@ -23,8 +23,12 @@
 		0176F743141635F500018748 /* BelgianBeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F742141635F500018748 /* BelgianBeerTests.m */; };
 		0176F7531416372A00018748 /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F7511416372A00018748 /* FavoriteViewController.m */; };
 		0176F7541416372A00018748 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F7521416372A00018748 /* FavoriteViewController.xib */; };
-		0176F758141637A700018748 /* ContentsNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F756141637A700018748 /* ContentsNaviController.m */; };
-		0176F759141637A700018748 /* ContentsNaviController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F757141637A700018748 /* ContentsNaviController.xib */; };
+		0176F77414163F7400018748 /* MainListNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F77214163F7400018748 /* MainListNaviController.m */; };
+		0176F77514163F7400018748 /* MainListNaviController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F77314163F7400018748 /* MainListNaviController.xib */; };
+		0176F77914163FC000018748 /* MainListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F77714163FC000018748 /* MainListTableController.m */; };
+		0176F77A14163FC000018748 /* MainListTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F77814163FC000018748 /* MainListTableController.xib */; };
+		0176F77E141640BC00018748 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F77C141640BC00018748 /* DetailViewController.m */; };
+		0176F77F141640BC00018748 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F77D141640BC00018748 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +62,15 @@
 		0176F7501416372A00018748 /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
 		0176F7511416372A00018748 /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
 		0176F7521416372A00018748 /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
-		0176F755141637A700018748 /* ContentsNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentsNaviController.h; sourceTree = "<group>"; };
-		0176F756141637A700018748 /* ContentsNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentsNaviController.m; sourceTree = "<group>"; };
-		0176F757141637A700018748 /* ContentsNaviController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentsNaviController.xib; sourceTree = "<group>"; };
+		0176F77114163F7400018748 /* MainListNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainListNaviController.h; sourceTree = "<group>"; };
+		0176F77214163F7400018748 /* MainListNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainListNaviController.m; sourceTree = "<group>"; };
+		0176F77314163F7400018748 /* MainListNaviController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainListNaviController.xib; sourceTree = "<group>"; };
+		0176F77614163FC000018748 /* MainListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainListTableController.h; sourceTree = "<group>"; };
+		0176F77714163FC000018748 /* MainListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainListTableController.m; sourceTree = "<group>"; };
+		0176F77814163FC000018748 /* MainListTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainListTableController.xib; sourceTree = "<group>"; };
+		0176F77B141640BB00018748 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		0176F77C141640BC00018748 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0176F77D141640BC00018748 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,13 +134,19 @@
 				0176F71B141635F400018748 /* BelgianBeerAppDelegate.h */,
 				0176F71C141635F400018748 /* BelgianBeerAppDelegate.m */,
 				0176F71E141635F400018748 /* MainWindow.xib */,
-				0176F755141637A700018748 /* ContentsNaviController.h */,
-				0176F756141637A700018748 /* ContentsNaviController.m */,
-				0176F757141637A700018748 /* ContentsNaviController.xib */,
 				0176F7501416372A00018748 /* FavoriteViewController.h */,
+				0176F77114163F7400018748 /* MainListNaviController.h */,
+				0176F77214163F7400018748 /* MainListNaviController.m */,
+				0176F77314163F7400018748 /* MainListNaviController.xib */,
+				0176F77614163FC000018748 /* MainListTableController.h */,
+				0176F77714163FC000018748 /* MainListTableController.m */,
+				0176F77814163FC000018748 /* MainListTableController.xib */,
 				0176F7511416372A00018748 /* FavoriteViewController.m */,
 				0176F7521416372A00018748 /* FavoriteViewController.xib */,
 				0176F713141635F400018748 /* Supporting Files */,
+				0176F77B141640BB00018748 /* DetailViewController.h */,
+				0176F77C141640BC00018748 /* DetailViewController.m */,
+				0176F77D141640BC00018748 /* DetailViewController.xib */,
 			);
 			path = BelgianBeer;
 			sourceTree = "<group>";
@@ -235,7 +251,9 @@
 				0176F717141635F400018748 /* InfoPlist.strings in Resources */,
 				0176F720141635F400018748 /* MainWindow.xib in Resources */,
 				0176F7541416372A00018748 /* FavoriteViewController.xib in Resources */,
-				0176F759141637A700018748 /* ContentsNaviController.xib in Resources */,
+				0176F77514163F7400018748 /* MainListNaviController.xib in Resources */,
+				0176F77A14163FC000018748 /* MainListTableController.xib in Resources */,
+				0176F77F141640BC00018748 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +292,9 @@
 				0176F719141635F400018748 /* main.m in Sources */,
 				0176F71D141635F400018748 /* BelgianBeerAppDelegate.m in Sources */,
 				0176F7531416372A00018748 /* FavoriteViewController.m in Sources */,
-				0176F758141637A700018748 /* ContentsNaviController.m in Sources */,
+				0176F77414163F7400018748 /* MainListNaviController.m in Sources */,
+				0176F77914163FC000018748 /* MainListTableController.m in Sources */,
+				0176F77E141640BC00018748 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +462,7 @@
 				0176F748141635F500018748 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0176F749141635F500018748 /* Build configuration list for PBXNativeTarget "BelgianBeerTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +471,7 @@
 				0176F74B141635F500018748 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
