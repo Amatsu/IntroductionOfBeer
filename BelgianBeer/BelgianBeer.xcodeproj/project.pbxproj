@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0176F70D141635F400018748 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F70C141635F400018748 /* UIKit.framework */; };
+		0176F70F141635F400018748 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F70E141635F400018748 /* Foundation.framework */; };
+		0176F711141635F400018748 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F710141635F400018748 /* CoreGraphics.framework */; };
+		0176F717141635F400018748 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0176F715141635F400018748 /* InfoPlist.strings */; };
+		0176F719141635F400018748 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F718141635F400018748 /* main.m */; };
+		0176F71D141635F400018748 /* BelgianBeerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F71C141635F400018748 /* BelgianBeerAppDelegate.m */; };
+		0176F720141635F400018748 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F71E141635F400018748 /* MainWindow.xib */; };
+		0176F734141635F400018748 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F733141635F400018748 /* SenTestingKit.framework */; };
+		0176F735141635F400018748 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F70C141635F400018748 /* UIKit.framework */; };
+		0176F736141635F400018748 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F70E141635F400018748 /* Foundation.framework */; };
+		0176F737141635F400018748 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F710141635F400018748 /* CoreGraphics.framework */; };
+		0176F73F141635F400018748 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0176F73D141635F400018748 /* InfoPlist.strings */; };
+		0176F741141635F500018748 /* BelgianBeerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 0176F740141635F500018748 /* BelgianBeerTests.h */; };
+		0176F743141635F500018748 /* BelgianBeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F742141635F500018748 /* BelgianBeerTests.m */; };
+		0176F7531416372A00018748 /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F7511416372A00018748 /* FavoriteViewController.m */; };
+		0176F7541416372A00018748 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F7521416372A00018748 /* FavoriteViewController.xib */; };
+		0176F758141637A700018748 /* ContentsNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F756141637A700018748 /* ContentsNaviController.m */; };
+		0176F759141637A700018748 /* ContentsNaviController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F757141637A700018748 /* ContentsNaviController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0176F738141635F400018748 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0176F6FF141635F400018748 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0176F707141635F400018748;
+			remoteInfo = BelgianBeer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0176F708141635F400018748 /* BelgianBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BelgianBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0176F70C141635F400018748 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0176F70E141635F400018748 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0176F710141635F400018748 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0176F714141635F400018748 /* BelgianBeer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BelgianBeer-Info.plist"; sourceTree = "<group>"; };
+		0176F716141635F400018748 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0176F718141635F400018748 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0176F71A141635F400018748 /* BelgianBeer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BelgianBeer-Prefix.pch"; sourceTree = "<group>"; };
+		0176F71B141635F400018748 /* BelgianBeerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BelgianBeerAppDelegate.h; sourceTree = "<group>"; };
+		0176F71C141635F400018748 /* BelgianBeerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BelgianBeerAppDelegate.m; sourceTree = "<group>"; };
+		0176F71F141635F400018748 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		0176F732141635F400018748 /* BelgianBeerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BelgianBeerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0176F733141635F400018748 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		0176F73C141635F400018748 /* BelgianBeerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BelgianBeerTests-Info.plist"; sourceTree = "<group>"; };
+		0176F73E141635F400018748 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0176F740141635F500018748 /* BelgianBeerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BelgianBeerTests.h; sourceTree = "<group>"; };
+		0176F742141635F500018748 /* BelgianBeerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BelgianBeerTests.m; sourceTree = "<group>"; };
+		0176F7501416372A00018748 /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
+		0176F7511416372A00018748 /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
+		0176F7521416372A00018748 /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		0176F755141637A700018748 /* ContentsNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentsNaviController.h; sourceTree = "<group>"; };
+		0176F756141637A700018748 /* ContentsNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentsNaviController.m; sourceTree = "<group>"; };
+		0176F757141637A700018748 /* ContentsNaviController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentsNaviController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0176F705141635F400018748 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0176F70D141635F400018748 /* UIKit.framework in Frameworks */,
+				0176F70F141635F400018748 /* Foundation.framework in Frameworks */,
+				0176F711141635F400018748 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0176F72E141635F400018748 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0176F734141635F400018748 /* SenTestingKit.framework in Frameworks */,
+				0176F735141635F400018748 /* UIKit.framework in Frameworks */,
+				0176F736141635F400018748 /* Foundation.framework in Frameworks */,
+				0176F737141635F400018748 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0176F6FD141635F400018748 = {
+			isa = PBXGroup;
+			children = (
+				0176F712141635F400018748 /* BelgianBeer */,
+				0176F73A141635F400018748 /* BelgianBeerTests */,
+				0176F70B141635F400018748 /* Frameworks */,
+				0176F709141635F400018748 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0176F709141635F400018748 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0176F708141635F400018748 /* BelgianBeer.app */,
+				0176F732141635F400018748 /* BelgianBeerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0176F70B141635F400018748 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0176F70C141635F400018748 /* UIKit.framework */,
+				0176F70E141635F400018748 /* Foundation.framework */,
+				0176F710141635F400018748 /* CoreGraphics.framework */,
+				0176F733141635F400018748 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0176F712141635F400018748 /* BelgianBeer */ = {
+			isa = PBXGroup;
+			children = (
+				0176F71B141635F400018748 /* BelgianBeerAppDelegate.h */,
+				0176F71C141635F400018748 /* BelgianBeerAppDelegate.m */,
+				0176F71E141635F400018748 /* MainWindow.xib */,
+				0176F755141637A700018748 /* ContentsNaviController.h */,
+				0176F756141637A700018748 /* ContentsNaviController.m */,
+				0176F757141637A700018748 /* ContentsNaviController.xib */,
+				0176F7501416372A00018748 /* FavoriteViewController.h */,
+				0176F7511416372A00018748 /* FavoriteViewController.m */,
+				0176F7521416372A00018748 /* FavoriteViewController.xib */,
+				0176F713141635F400018748 /* Supporting Files */,
+			);
+			path = BelgianBeer;
+			sourceTree = "<group>";
+		};
+		0176F713141635F400018748 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0176F714141635F400018748 /* BelgianBeer-Info.plist */,
+				0176F715141635F400018748 /* InfoPlist.strings */,
+				0176F718141635F400018748 /* main.m */,
+				0176F71A141635F400018748 /* BelgianBeer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0176F73A141635F400018748 /* BelgianBeerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0176F740141635F500018748 /* BelgianBeerTests.h */,
+				0176F742141635F500018748 /* BelgianBeerTests.m */,
+				0176F73B141635F400018748 /* Supporting Files */,
+			);
+			path = BelgianBeerTests;
+			sourceTree = "<group>";
+		};
+		0176F73B141635F400018748 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0176F73C141635F400018748 /* BelgianBeerTests-Info.plist */,
+				0176F73D141635F400018748 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0176F707141635F400018748 /* BelgianBeer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0176F746141635F500018748 /* Build configuration list for PBXNativeTarget "BelgianBeer" */;
+			buildPhases = (
+				0176F704141635F400018748 /* Sources */,
+				0176F705141635F400018748 /* Frameworks */,
+				0176F706141635F400018748 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BelgianBeer;
+			productName = BelgianBeer;
+			productReference = 0176F708141635F400018748 /* BelgianBeer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0176F731141635F400018748 /* BelgianBeerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0176F749141635F500018748 /* Build configuration list for PBXNativeTarget "BelgianBeerTests" */;
+			buildPhases = (
+				0176F72D141635F400018748 /* Sources */,
+				0176F72E141635F400018748 /* Frameworks */,
+				0176F72F141635F400018748 /* Resources */,
+				0176F730141635F400018748 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0176F739141635F400018748 /* PBXTargetDependency */,
+			);
+			name = BelgianBeerTests;
+			productName = BelgianBeerTests;
+			productReference = 0176F732141635F400018748 /* BelgianBeerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0176F6FF141635F400018748 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 0176F702141635F400018748 /* Build configuration list for PBXProject "BelgianBeer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0176F6FD141635F400018748;
+			productRefGroup = 0176F709141635F400018748 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0176F707141635F400018748 /* BelgianBeer */,
+				0176F731141635F400018748 /* BelgianBeerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0176F706141635F400018748 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0176F717141635F400018748 /* InfoPlist.strings in Resources */,
+				0176F720141635F400018748 /* MainWindow.xib in Resources */,
+				0176F7541416372A00018748 /* FavoriteViewController.xib in Resources */,
+				0176F759141637A700018748 /* ContentsNaviController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0176F72F141635F400018748 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0176F73F141635F400018748 /* InfoPlist.strings in Resources */,
+				0176F741141635F500018748 /* BelgianBeerTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0176F730141635F400018748 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0176F704141635F400018748 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0176F719141635F400018748 /* main.m in Sources */,
+				0176F71D141635F400018748 /* BelgianBeerAppDelegate.m in Sources */,
+				0176F7531416372A00018748 /* FavoriteViewController.m in Sources */,
+				0176F758141637A700018748 /* ContentsNaviController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0176F72D141635F400018748 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0176F743141635F500018748 /* BelgianBeerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0176F739141635F400018748 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0176F707141635F400018748 /* BelgianBeer */;
+			targetProxy = 0176F738141635F400018748 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0176F715141635F400018748 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0176F716141635F400018748 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0176F71E141635F400018748 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0176F71F141635F400018748 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		0176F73D141635F400018748 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0176F73E141635F400018748 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0176F744141635F500018748 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0176F745141635F500018748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0176F747141635F500018748 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BelgianBeer/BelgianBeer-Prefix.pch";
+				INFOPLIST_FILE = "BelgianBeer/BelgianBeer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0176F748141635F500018748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BelgianBeer/BelgianBeer-Prefix.pch";
+				INFOPLIST_FILE = "BelgianBeer/BelgianBeer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0176F74A141635F500018748 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BelgianBeer.app/BelgianBeer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BelgianBeer/BelgianBeer-Prefix.pch";
+				INFOPLIST_FILE = "BelgianBeerTests/BelgianBeerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0176F74B141635F500018748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BelgianBeer.app/BelgianBeer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BelgianBeer/BelgianBeer-Prefix.pch";
+				INFOPLIST_FILE = "BelgianBeerTests/BelgianBeerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0176F702141635F400018748 /* Build configuration list for PBXProject "BelgianBeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0176F744141635F500018748 /* Debug */,
+				0176F745141635F500018748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0176F746141635F500018748 /* Build configuration list for PBXNativeTarget "BelgianBeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0176F747141635F500018748 /* Debug */,
+				0176F748141635F500018748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0176F749141635F500018748 /* Build configuration list for PBXNativeTarget "BelgianBeerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0176F74A141635F500018748 /* Debug */,
+				0176F74B141635F500018748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0176F6FF141635F400018748 /* Project object */;
+}

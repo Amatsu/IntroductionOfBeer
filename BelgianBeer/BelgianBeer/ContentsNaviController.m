@@ -1,14 +1,14 @@
 //
-//  SeachViewController.m
-//  TabBarSample
+//  ContentsNaviController.m
+//  BelgianBeer
 //
-//  Created by Amatsu on 11/09/04.
+//  Created by Amatsu on 11/09/06.
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "SeachViewController.h"
+#import "ContentsNaviController.h"
 
-@implementation SeachViewController
+@implementation ContentsNaviController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
