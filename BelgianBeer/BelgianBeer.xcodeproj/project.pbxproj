@@ -29,6 +29,7 @@
 		0176F77A14163FC000018748 /* MainListTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F77814163FC000018748 /* MainListTableController.xib */; };
 		0176F77E141640BC00018748 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F77C141640BC00018748 /* DetailViewController.m */; };
 		0176F77F141640BC00018748 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F77D141640BC00018748 /* DetailViewController.xib */; };
+		0176F7881416472E00018748 /* Beer.db in Resources */ = {isa = PBXBuildFile; fileRef = 0176F7871416472E00018748 /* Beer.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		0176F77B141640BB00018748 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		0176F77C141640BC00018748 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		0176F77D141640BC00018748 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		0176F7871416472E00018748 /* Beer.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Beer.db; path = BelgianBeer/Beer.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		0176F6FD141635F400018748 = {
 			isa = PBXGroup;
 			children = (
+				0176F7871416472E00018748 /* Beer.db */,
 				0176F712141635F400018748 /* BelgianBeer */,
 				0176F73A141635F400018748 /* BelgianBeerTests */,
 				0176F70B141635F400018748 /* Frameworks */,
@@ -270,6 +273,7 @@
 				0176F77514163F7400018748 /* MainListNaviController.xib in Resources */,
 				0176F77A14163FC000018748 /* MainListTableController.xib in Resources */,
 				0176F77F141640BC00018748 /* DetailViewController.xib in Resources */,
+				0176F7881416472E00018748 /* Beer.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
