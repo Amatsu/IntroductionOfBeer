@@ -79,7 +79,6 @@
     }else{
         NSLog(@"Could not open db.");
     }
-    
 }
 
 - (void)viewDidUnload
