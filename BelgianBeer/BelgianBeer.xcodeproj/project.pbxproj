@@ -30,6 +30,10 @@
 		0176F77E141640BC00018748 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F77C141640BC00018748 /* DetailViewController.m */; };
 		0176F77F141640BC00018748 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F77D141640BC00018748 /* DetailViewController.xib */; };
 		0176F7881416472E00018748 /* Beer.db in Resources */ = {isa = PBXBuildFile; fileRef = 0176F7871416472E00018748 /* Beer.db */; };
+		0176F78A141648D400018748 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F789141648D400018748 /* libsqlite3.0.dylib */; };
+		0176F7921416491300018748 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F78D1416491300018748 /* FMDatabase.m */; };
+		0176F7931416491300018748 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F78F1416491300018748 /* FMDatabaseAdditions.m */; };
+		0176F7941416491300018748 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F7911416491300018748 /* FMResultSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,13 @@
 		0176F77C141640BC00018748 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		0176F77D141640BC00018748 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		0176F7871416472E00018748 /* Beer.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Beer.db; path = BelgianBeer/Beer.db; sourceTree = "<group>"; };
+		0176F789141648D400018748 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		0176F78C1416491300018748 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		0176F78D1416491300018748 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		0176F78E1416491300018748 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		0176F78F1416491300018748 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		0176F7901416491300018748 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		0176F7911416491300018748 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0176F78A141648D400018748 /* libsqlite3.0.dylib in Frameworks */,
 				0176F70D141635F400018748 /* UIKit.framework in Frameworks */,
 				0176F70F141635F400018748 /* Foundation.framework in Frameworks */,
 				0176F711141635F400018748 /* CoreGraphics.framework in Frameworks */,
@@ -123,6 +135,7 @@
 		0176F70B141635F400018748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0176F789141648D400018748 /* libsqlite3.0.dylib */,
 				0176F70C141635F400018748 /* UIKit.framework */,
 				0176F70E141635F400018748 /* Foundation.framework */,
 				0176F710141635F400018748 /* CoreGraphics.framework */,
@@ -134,6 +147,7 @@
 		0176F712141635F400018748 /* BelgianBeer */ = {
 			isa = PBXGroup;
 			children = (
+				0176F78B141648EC00018748 /* lib */,
 				0176F7811416421500018748 /* MainListView */,
 				0176F71B141635F400018748 /* BelgianBeerAppDelegate.h */,
 				0176F71C141635F400018748 /* BelgianBeerAppDelegate.m */,
@@ -198,6 +212,19 @@
 				0176F77814163FC000018748 /* MainListTableController.xib */,
 			);
 			name = MainListView;
+			sourceTree = "<group>";
+		};
+		0176F78B141648EC00018748 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				0176F78C1416491300018748 /* FMDatabase.h */,
+				0176F78D1416491300018748 /* FMDatabase.m */,
+				0176F78E1416491300018748 /* FMDatabaseAdditions.h */,
+				0176F78F1416491300018748 /* FMDatabaseAdditions.m */,
+				0176F7901416491300018748 /* FMResultSet.h */,
+				0176F7911416491300018748 /* FMResultSet.m */,
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +342,9 @@
 				0176F77414163F7400018748 /* MainListNaviController.m in Sources */,
 				0176F77914163FC000018748 /* MainListTableController.m in Sources */,
 				0176F77E141640BC00018748 /* DetailViewController.m in Sources */,
+				0176F7921416491300018748 /* FMDatabase.m in Sources */,
+				0176F7931416491300018748 /* FMDatabaseAdditions.m in Sources */,
+				0176F7941416491300018748 /* FMResultSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
