@@ -131,22 +131,14 @@
 		0176F712141635F400018748 /* BelgianBeer */ = {
 			isa = PBXGroup;
 			children = (
+				0176F7811416421500018748 /* MainListView */,
 				0176F71B141635F400018748 /* BelgianBeerAppDelegate.h */,
 				0176F71C141635F400018748 /* BelgianBeerAppDelegate.m */,
 				0176F71E141635F400018748 /* MainWindow.xib */,
 				0176F7501416372A00018748 /* FavoriteViewController.h */,
-				0176F77114163F7400018748 /* MainListNaviController.h */,
-				0176F77214163F7400018748 /* MainListNaviController.m */,
-				0176F77314163F7400018748 /* MainListNaviController.xib */,
-				0176F77614163FC000018748 /* MainListTableController.h */,
-				0176F77714163FC000018748 /* MainListTableController.m */,
-				0176F77814163FC000018748 /* MainListTableController.xib */,
 				0176F7511416372A00018748 /* FavoriteViewController.m */,
 				0176F7521416372A00018748 /* FavoriteViewController.xib */,
 				0176F713141635F400018748 /* Supporting Files */,
-				0176F77B141640BB00018748 /* DetailViewController.h */,
-				0176F77C141640BC00018748 /* DetailViewController.m */,
-				0176F77D141640BC00018748 /* DetailViewController.xib */,
 			);
 			path = BelgianBeer;
 			sourceTree = "<group>";
@@ -179,6 +171,30 @@
 				0176F73D141635F400018748 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0176F780141641F800018748 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				0176F77B141640BB00018748 /* DetailViewController.h */,
+				0176F77C141640BC00018748 /* DetailViewController.m */,
+				0176F77D141640BC00018748 /* DetailViewController.xib */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
+		0176F7811416421500018748 /* MainListView */ = {
+			isa = PBXGroup;
+			children = (
+				0176F780141641F800018748 /* DetailView */,
+				0176F77114163F7400018748 /* MainListNaviController.h */,
+				0176F77214163F7400018748 /* MainListNaviController.m */,
+				0176F77314163F7400018748 /* MainListNaviController.xib */,
+				0176F77614163FC000018748 /* MainListTableController.h */,
+				0176F77714163FC000018748 /* MainListTableController.m */,
+				0176F77814163FC000018748 /* MainListTableController.xib */,
+			);
+			name = MainListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
