@@ -35,6 +35,7 @@
 		0176F7931416491300018748 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F78F1416491300018748 /* FMDatabaseAdditions.m */; };
 		0176F7941416491300018748 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F7911416491300018748 /* FMResultSet.m */; };
 		0176F79B141654B200018748 /* BeerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F79A141654B200018748 /* BeerCategory.m */; };
+		0176F7A514178C7700018748 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F7A414178C7700018748 /* Beer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		0176F7911416491300018748 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		0176F799141654B200018748 /* BeerCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerCategory.h; sourceTree = "<group>"; };
 		0176F79A141654B200018748 /* BeerCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerCategory.m; sourceTree = "<group>"; };
+		0176F7A314178C7700018748 /* Beer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beer.h; sourceTree = "<group>"; };
+		0176F7A414178C7700018748 /* Beer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,10 +155,10 @@
 			children = (
 				0176F79D1416584B00018748 /* View */,
 				0176F79C1416583500018748 /* Entity */,
-				0176F78B141648EC00018748 /* lib */,
 				0176F71B141635F400018748 /* BelgianBeerAppDelegate.h */,
 				0176F71C141635F400018748 /* BelgianBeerAppDelegate.m */,
 				0176F71E141635F400018748 /* MainWindow.xib */,
+				0176F78B141648EC00018748 /* lib */,
 				0176F713141635F400018748 /* Supporting Files */,
 			);
 			path = BelgianBeer;
@@ -231,6 +234,8 @@
 		0176F79C1416583500018748 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				0176F7A314178C7700018748 /* Beer.h */,
+				0176F7A414178C7700018748 /* Beer.m */,
 				0176F799141654B200018748 /* BeerCategory.h */,
 				0176F79A141654B200018748 /* BeerCategory.m */,
 			);
@@ -375,6 +380,7 @@
 				0176F7931416491300018748 /* FMDatabaseAdditions.m in Sources */,
 				0176F7941416491300018748 /* FMResultSet.m in Sources */,
 				0176F79B141654B200018748 /* BeerCategory.m in Sources */,
+				0176F7A514178C7700018748 /* Beer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

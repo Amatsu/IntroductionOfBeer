@@ -7,17 +7,35 @@
 //
 
 #import "BeerCategory.h"
+#import <Foundation/NSString.h>
 
 @implementation BeerCategory
 
-- (id)init
-{
+@synthesize categoryID;
+@synthesize categoryName;
+@synthesize categroyExplanation;
+@synthesize beerList;
+
+
+- (id)init{
     self = [super init];
     if (self) {
         // Initialization code here.
-    }
+        return [self initParameter:-1 name:@"initName" exp:@"initExp"];
+   }
     
     return self;
 }
 
+- (id)initParameter:(int)seq
+              name:(NSString *)name
+               exp:(NSString *) exp{
+    
+    categoryID = seq;
+    categoryName = name;
+    categroyExplanation = exp;
+    beerList = [[NSMutableArray alloc]init];
+    
+    return self;
+}
 @end

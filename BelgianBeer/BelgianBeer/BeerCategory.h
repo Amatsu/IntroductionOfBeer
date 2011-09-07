@@ -13,6 +13,16 @@
     int categoryID;
     NSString *categoryName;
     NSString *categroyExplanation;
+    NSMutableArray *beerList;
 }
+
+@property (readonly)int categoryID;
+@property (readonly)NSString *categoryName;
+@property (readonly)NSString *categroyExplanation;
+@property (readonly)NSMutableArray *beerList;
+
+- (id)initParameter:(int)seq
+                name:(NSString *)name
+                 exp:(NSString *) exp;
 
 @end

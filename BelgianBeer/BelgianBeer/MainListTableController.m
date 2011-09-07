@@ -8,6 +8,8 @@
 
 #import "MainListTableController.h"
 #import "DetailViewController.h"
+#import "BeerCategory.h"
+#import "Beer.h"
 
 @implementation MainListTableController
 
@@ -96,13 +98,38 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    }else{
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
+    //カテゴリの生成
+    BeerCategory *testCategory = [[[BeerCategory alloc] init]autorelease];
+    [testCategory initParameter:1 name:@"categoryName" exp:@"Exp"];
+    
+    //ビールの生成
+    Beer *testBeer1 = [[[Beer alloc]init]autorelease];
+    [testBeer1 initParameter:1 name:@"asahi" exp:@"オーバル"];
+    Beer *testBeer2 = [[[Beer alloc]init]autorelease];
+    [testBeer2 initParameter:2 name:@"kirin" exp:@"オーバル"];
+    
+    [testCategory.beerList addObject:testBeer1];
+    [testCategory.beerList addObject:testBeer2];
+    
+    NSLog(@"Datacount: %d",[testCategory.beerList count]);
+    
+    for (Beer *beer in testCategory.beerList) {
+        NSLog(@"%@",beer.beerName);   
+    }
+    
+    Beer *tmp = [testCategory.beerList objectAtIndex:0];
+    
+    cell.textLabel.text = tmp.beerName;    
     // Configure the cell...
     
     return cell;
