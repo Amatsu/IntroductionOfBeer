@@ -218,7 +218,7 @@
 //    }
     
     // Configure the cell...
-    cell.textLabel.text = [NSString stringWithFormat:@"%d",[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:0] commodityID]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%d",[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] commodityID]];
     
     return cell;
 }
