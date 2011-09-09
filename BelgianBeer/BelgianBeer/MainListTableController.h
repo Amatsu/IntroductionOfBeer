@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/NSArray.h>
 
-@interface MainListTableController : UITableViewController
+@interface MainListTableController : UITableViewController{
+    NSMutableArray *categoryList;
+}
+
+@property (readonly) NSMutableArray *categoryList;
 
 @end

@@ -8,16 +8,23 @@
 
 #import "MainListTableController.h"
 #import "DetailViewController.h"
+#import "FMDatabase.h"
+#import "FMDatabaseAdditions.h"
 #import "BeerCategory.h"
 #import "Beer.h"
 
 @implementation MainListTableController
 
+//カテゴリ一覧
+@synthesize categoryList;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
+        
         // Custom initialization
+        
     }
     return self;
 }
@@ -41,7 +48,81 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+    
+    //--------------------------------------------------------------------
+    //DBに接続し必要情報を取得
+    //--------------------------------------------------------------------
+    
+    // ファイルがなければプロジェクトフォルダからiPhone Documentフォルダにコピー
+    BOOL success;
+    NSError *error;	
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSArray  *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"Beer.db"];
+    success = [fm fileExistsAtPath:writableDBPath];
+    if(!success){
+        NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Beer.db"];
+        success = [fm copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
+        if(!success){
+            //Error
+            //NSLog([error localizedDescription]);
+        }
+    }
+    
+    //DBのパスをログ出力
+    //NSLog(writableDBPath);
+    
+    // DBに接続
+    FMDatabase* db = [FMDatabase databaseWithPath:writableDBPath];
+    if ([db open]) {
+        [db setShouldCacheStatements:YES];
+        
+        NSString* sql = @"SELECT cate.category_id,cate.name as category_name,cate.explanation as category_explanation,com.commodity_id, com.name as commodity_name,com.explanation as commodity_explanation FROM Commodity com INNER JOIN Category cate On com.category_ID = cate.Category_ID";
+        
+        //カテゴリ一覧を生成
+        categoryList = [[NSMutableArray alloc]init];
+        
+        // SELECT
+        FMResultSet *rs = [db executeQuery:sql];
+        
+        while ([rs next]) {
+            
+            //カテゴリを生成
+            BeerCategory *category = [[BeerCategory alloc] init];
+            [category initParameter:[rs intForColumn:@"Category_id"] 
+                               name:[rs stringForColumn:@"category_name"]
+                                exp:[rs stringForColumn:@"category_explanation"]];
+            
+            //ビールを生成
+            Beer *beer = [[Beer alloc]init];
+            [beer initParameter:[rs intForColumn:@"Commodity_id"]
+                           name:[rs stringForColumn:@"commodity_name"]
+                            exp:[rs stringForColumn:@"commodity_explanation"]];
+
+            
+            //カテゴリにビールを追加
+            [category.beerList addObject:beer];
+            
+            //生成したカテゴリを追加
+            [categoryList addObject:category];
+            
+            //            NSLog(@"%d %@ %@", [rs intForColumn:@"commodity_id"]
+            //                  , [rs stringForColumn:@"category_name"]
+            //                  , [rs stringForColumn:@"commodity_name"]);
+            
+        }
+        [rs close];  
+        [db close];
+    }else{
+        NSLog(@"Could not open db.");
+    }
+    
+    NSLog(@"%d",[[categoryList objectAtIndex:0] categoryID]);
+    NSLog(@"%@",[[categoryList objectAtIndex:0] categoryName]);
+    NSLog(@"%@",[[categoryList objectAtIndex:0] categroyExplanation]);
+    
+ }
 
 - (void)viewDidUnload
 {
@@ -81,19 +162,23 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 2;
+    //セクションの数はカテゴリの数
+    return [categoryList count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 5;
+    //該当セクションの行数はビールの数
+    return [[[categoryList objectAtIndex:section] beerList] count];
 }
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     //セクション名
-    return @"A-Z";
+    //NSLog(@"%d", [categoryList count]);
+    NSLog(@"%@",[[categoryList objectAtIndex:0] categoryName]);
+    return @"aa";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,33 +189,31 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }else{
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    //カテゴリの生成
-    BeerCategory *testCategory = [[[BeerCategory alloc] init]autorelease];
-    [testCategory initParameter:1 name:@"categoryName" exp:@"Exp"];
+//    //カテゴリの生成
+//    BeerCategory *testCategory = [[[BeerCategory alloc] init]autorelease];
+//    [testCategory initParameter:1 name:@"categoryName" exp:@"Exp"];
+//    
+//    //ビールの生成
+//    Beer *testBeer1 = [[[Beer alloc]init]autorelease];
+//    [testBeer1 initParameter:1 name:@"asahi" exp:@"オーバル"];
+//    Beer *testBeer2 = [[[Beer alloc]init]autorelease];
+//    [testBeer2 initParameter:2 name:@"kirin" exp:@"オーバル"];
+//    
+//    [testCategory.beerList addObject:testBeer1];
+//    [testCategory.beerList addObject:testBeer2];
+//    
+//    NSLog(@"Datacount: %d",[testCategory.beerList count]);
+//    
+//    for (Beer *beer in testCategory.beerList) {
+//        NSLog(@"%@",beer.beerName);   
+//    }
+//    
+//    Beer *tmp = [testCategory.beerList objectAtIndex:0];
     
-    //ビールの生成
-    Beer *testBeer1 = [[[Beer alloc]init]autorelease];
-    [testBeer1 initParameter:1 name:@"asahi" exp:@"オーバル"];
-    Beer *testBeer2 = [[[Beer alloc]init]autorelease];
-    [testBeer2 initParameter:2 name:@"kirin" exp:@"オーバル"];
-    
-    [testCategory.beerList addObject:testBeer1];
-    [testCategory.beerList addObject:testBeer2];
-    
-    NSLog(@"Datacount: %d",[testCategory.beerList count]);
-    
-    for (Beer *beer in testCategory.beerList) {
-        NSLog(@"%@",beer.beerName);   
-    }
-    
-    Beer *tmp = [testCategory.beerList objectAtIndex:0];
-    
-    cell.textLabel.text = tmp.beerName;    
     // Configure the cell...
+    cell.textLabel.text = @"test";
     
     return cell;
 }

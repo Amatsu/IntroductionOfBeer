@@ -14,6 +14,7 @@
     NSString *beerExplanation;
 }
 
+
 @property (readonly)int commodityID;
 @property (readonly)NSString *beerName;
 @property (readonly)NSString *beerExplanation;
