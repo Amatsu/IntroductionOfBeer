@@ -213,9 +213,9 @@
 //    
 //    Beer *tmp = [testCategory.beerList objectAtIndex:0];
     
-    for (Beer *beer in [[categoryList objectAtIndex:0] beerList]) {
-           NSLog(@"%@",beer.beerName);   
-    }
+//    for (Beer *beer in [[categoryList objectAtIndex:0] beerList]) {
+//           NSLog(@"%@",beer.beerName);   
+//    }
     
     // Configure the cell...
     cell.textLabel.text = [NSString stringWithFormat:@"%d",[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:0] commodityID]];
