@@ -38,4 +38,9 @@
     
     return self;
 }
+
+- (NSString *) getCategoryName{
+    return categoryName;
+}
+
 @end

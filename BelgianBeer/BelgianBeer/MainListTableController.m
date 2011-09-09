@@ -107,11 +107,8 @@
             //生成したカテゴリを追加
             [categoryList addObject:category];
             
-            //            NSLog(@"%d %@ %@", [rs intForColumn:@"commodity_id"]
-            //                  , [rs stringForColumn:@"category_name"]
-            //                  , [rs stringForColumn:@"commodity_name"]);
-            
         }
+        
         [rs close];  
         [db close];
     }else{
@@ -121,6 +118,10 @@
     NSLog(@"%d",[[categoryList objectAtIndex:0] categoryID]);
     NSLog(@"%@",[[categoryList objectAtIndex:0] categoryName]);
     NSLog(@"%@",[[categoryList objectAtIndex:0] categroyExplanation]);
+    
+    NSLog(@"%@",[[[[categoryList objectAtIndex:0] beerList] objectAtIndex:0] beerName]);
+    NSLog(@"%@",[[[[categoryList objectAtIndex:0] beerList] objectAtIndex:0] beerExplanation]);    
+
     
  }
 
@@ -177,8 +178,8 @@
 {
     //セクション名
     //NSLog(@"%d", [categoryList count]);
-    NSLog(@"%@",[[categoryList objectAtIndex:0] categoryName]);
-    return @"aa";
+    NSLog(@"CategoryID:::%d",[[categoryList objectAtIndex:0] categoryID]);
+    return [NSString stringWithFormat:@"%d",[[categoryList objectAtIndex:section] categoryID]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -212,8 +213,12 @@
 //    
 //    Beer *tmp = [testCategory.beerList objectAtIndex:0];
     
+    for (Beer *beer in [[categoryList objectAtIndex:0] beerList]) {
+           NSLog(@"%@",beer.beerName);   
+    }
+    
     // Configure the cell...
-    cell.textLabel.text = @"test";
+    cell.textLabel.text = [NSString stringWithFormat:@"%d",[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:0] commodityID]];
     
     return cell;
 }
