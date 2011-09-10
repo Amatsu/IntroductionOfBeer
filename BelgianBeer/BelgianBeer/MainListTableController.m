@@ -15,6 +15,27 @@
 
 @implementation MainListTableController
 
+#define SECTION_HEIGHT 30   //セクションの高さ
+#define ROW_HEIGHT 60       //行の田坂
+
+#define NAME_TAG 1
+#define TIME_TAG 2
+#define IMAGE_TAG 3
+
+#define LEFT_COLUMN_OFFSET 10.0
+#define LEFT_COLUMN_WIDTH 160.0
+
+#define MIDDLE_COLUMN_OFFSET 170.0
+#define MIDDLE_COLUMN_WIDTH 90.0
+
+#define RIGHT_COLUMN_OFFSET 280.0
+
+#define MAIN_FONT_SIZE 16.0
+#define LABEL_HEIGHT 26.0
+
+#define IMAGE_SIDE 30.0
+
+
 //カテゴリ一覧
 @synthesize categoryList;
 
@@ -174,18 +195,27 @@
     return [[[categoryList objectAtIndex:section] beerList] count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return SECTION_HEIGHT;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //cellの高さ
+    return ROW_HEIGHT;
+}
+
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     //セクション名
     //NSLog(@"%d", [categoryList count]);
-    NSLog(@"CategoryID:::%d",[[categoryList objectAtIndex:0] categoryID]);
+    //NSLog(@"CategoryID:::%d",[[categoryList objectAtIndex:0] categoryID]);
     return [NSString stringWithFormat:@"%@",[[categoryList objectAtIndex:section] categoryName]];
-    //return @"カテゴリ名を表示";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
 	
-	static NSString *CellIdentifier = @"TimeZoneCell";
+	static NSString *CellIdentifier = @"Cell";
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
@@ -198,26 +228,6 @@
     
 	return cell;
 }
-
-
-#define ROW_HEIGHT 60
-
-#define NAME_TAG 1
-#define TIME_TAG 2
-#define IMAGE_TAG 3
-
-#define LEFT_COLUMN_OFFSET 10.0
-#define LEFT_COLUMN_WIDTH 160.0
-
-#define MIDDLE_COLUMN_OFFSET 170.0
-#define MIDDLE_COLUMN_WIDTH 90.0
-
-#define RIGHT_COLUMN_OFFSET 280.0
-
-#define MAIN_FONT_SIZE 18.0
-#define LABEL_HEIGHT 26.0
-
-#define IMAGE_SIDE 30.0
 
 - (UITableViewCell *)tableViewCellWithReuseIdentifier:(NSString *)identifier 
 {
@@ -291,7 +301,7 @@
 	
 	// Set the time.
 	label = (UILabel *)[cell viewWithTag:TIME_TAG];
-	label.text = @"時間";
+	label.text =  [[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerExplanation];
 	
 	// Set the image.
 	UIImageView *imageView = (UIImageView *)[cell viewWithTag:IMAGE_TAG];
