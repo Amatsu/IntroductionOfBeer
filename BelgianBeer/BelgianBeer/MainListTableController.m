@@ -91,14 +91,14 @@
             //カテゴリを生成
             BeerCategory *category = [[BeerCategory alloc] init];
             [category initParameter:[rs intForColumn:@"Category_id"] 
-                               name:[rs stringForColumn:@"category_name"]
-                                exp:[rs stringForColumn:@"category_explanation"]];
+                               name:[[rs stringForColumn:@"category_name"] retain]
+                                exp:[[rs stringForColumn:@"category_explanation"] retain]];
             
             //ビールを生成
             Beer *beer = [[Beer alloc]init];
             [beer initParameter:[rs intForColumn:@"Commodity_id"]
-                           name:[rs stringForColumn:@"commodity_name"]
-                            exp:[rs stringForColumn:@"commodity_explanation"]];
+                           name:[[rs stringForColumn:@"commodity_name"] retain]
+                            exp:[[rs stringForColumn:@"commodity_explanation"] retain]];
 
             
             //カテゴリにビールを追加
@@ -179,8 +179,8 @@
     //セクション名
     //NSLog(@"%d", [categoryList count]);
     NSLog(@"CategoryID:::%d",[[categoryList objectAtIndex:0] categoryID]);
-    //return [NSString stringWithFormat:@"%d",[[categoryList objectAtIndex:section] categoryID]];
-    return @"カテゴリ名を表示";
+    return [NSString stringWithFormat:@"%@",[[categoryList objectAtIndex:section] categoryName]];
+    //return @"カテゴリ名を表示";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
@@ -194,10 +194,7 @@
 	}
 	
 	// configureCell:cell forIndexPath: sets the text and image for the cell -- the method is factored out as it's also called during minuted-based updates.
-	//[self configureCell:cell forIndexPath:indexPath];
-    
-    //セルに値を表示
-    cell.textLabel.text = @"ビール名を表示";
+	[self configureCell:cell forIndexPath:indexPath];
     
 	return cell;
 }
@@ -290,7 +287,7 @@
 	
 	// Set the locale name.
 	label = (UILabel *)[cell viewWithTag:NAME_TAG];
-	label.text = @"天気";
+	label.text = [[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerName];
 	
 	// Set the time.
 	label = (UILabel *)[cell viewWithTag:TIME_TAG];

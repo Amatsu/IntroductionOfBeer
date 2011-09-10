@@ -25,6 +25,4 @@
                 name:(NSString *)name
                  exp:(NSString *) exp;
 
-- (NSString *) getCategoryName;
-
 @end
