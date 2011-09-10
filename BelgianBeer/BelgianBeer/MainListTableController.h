@@ -12,7 +12,9 @@
 @interface MainListTableController : UITableViewController{
     NSMutableArray *categoryList;
 }
-
 @property (readonly) NSMutableArray *categoryList;
+
+- (UITableViewCell *)tableViewCellWithReuseIdentifier:(NSString *)identifier;
+- (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath;
 
 @end

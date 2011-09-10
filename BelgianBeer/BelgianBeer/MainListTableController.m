@@ -179,49 +179,128 @@
     //セクション名
     //NSLog(@"%d", [categoryList count]);
     NSLog(@"CategoryID:::%d",[[categoryList objectAtIndex:0] categoryID]);
-    return [NSString stringWithFormat:@"%d",[[categoryList objectAtIndex:section] categoryID]];
+    //return [NSString stringWithFormat:@"%d",[[categoryList objectAtIndex:section] categoryID]];
+    return @"カテゴリ名を表示";
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
+	
+	static NSString *CellIdentifier = @"TimeZoneCell";
+	
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	
+	if (cell == nil) {
+		cell = [self tableViewCellWithReuseIdentifier:CellIdentifier];
+	}
+	
+	// configureCell:cell forIndexPath: sets the text and image for the cell -- the method is factored out as it's also called during minuted-based updates.
+	//[self configureCell:cell forIndexPath:indexPath];
+    
+    //セルに値を表示
+    cell.textLabel.text = @"ビール名を表示";
+    
+	return cell;
+}
+
+
+#define ROW_HEIGHT 60
+
+#define NAME_TAG 1
+#define TIME_TAG 2
+#define IMAGE_TAG 3
+
+#define LEFT_COLUMN_OFFSET 10.0
+#define LEFT_COLUMN_WIDTH 160.0
+
+#define MIDDLE_COLUMN_OFFSET 170.0
+#define MIDDLE_COLUMN_WIDTH 90.0
+
+#define RIGHT_COLUMN_OFFSET 280.0
+
+#define MAIN_FONT_SIZE 18.0
+#define LABEL_HEIGHT 26.0
+
+#define IMAGE_SIDE 30.0
+
+- (UITableViewCell *)tableViewCellWithReuseIdentifier:(NSString *)identifier 
 {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
-//    //カテゴリの生成
-//    BeerCategory *testCategory = [[[BeerCategory alloc] init]autorelease];
-//    [testCategory initParameter:1 name:@"categoryName" exp:@"Exp"];
-//    
-//    //ビールの生成
-//    Beer *testBeer1 = [[[Beer alloc]init]autorelease];
-//    [testBeer1 initParameter:1 name:@"asahi" exp:@"オーバル"];
-//    Beer *testBeer2 = [[[Beer alloc]init]autorelease];
-//    [testBeer2 initParameter:2 name:@"kirin" exp:@"オーバル"];
-//    
-//    [testCategory.beerList addObject:testBeer1];
-//    [testCategory.beerList addObject:testBeer2];
-//    
-//    NSLog(@"Datacount: %d",[testCategory.beerList count]);
-//    
-//    for (Beer *beer in testCategory.beerList) {
-//        NSLog(@"%@",beer.beerName);   
-//    }
-//    
-//    Beer *tmp = [testCategory.beerList objectAtIndex:0];
     
 //    for (Beer *beer in [[categoryList objectAtIndex:0] beerList]) {
 //           NSLog(@"%@",beer.beerName);   
 //    }
     
-    // Configure the cell...
-    cell.textLabel.text = [NSString stringWithFormat:@"%d",[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] commodityID]];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%d",[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] commodityID]];
+//
     
-    return cell;
+    /*
+	 Create an instance of UITableViewCell and add tagged subviews for the name, local time, and quarter image of the time zone.
+	 */
+	UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
+    
+	/*
+	 Create labels for the text fields; set the highlight color so that when the cell is selected it changes appropriately.
+     */
+	UILabel *label;
+	CGRect rect;
+    
+    // Create an image view for the quarter image.
+	rect = CGRectMake(RIGHT_COLUMN_OFFSET, (ROW_HEIGHT - IMAGE_SIDE) / 2.0, IMAGE_SIDE, IMAGE_SIDE);
+    
+	UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect];
+	imageView.tag = IMAGE_TAG;
+	[cell.contentView addSubview:imageView];
+	[imageView release];	
+	
+	// Create a label for the time zone name.
+	rect = CGRectMake(LEFT_COLUMN_OFFSET, (ROW_HEIGHT - LABEL_HEIGHT) / 2.0, LEFT_COLUMN_WIDTH, LABEL_HEIGHT);
+	label = [[UILabel alloc] initWithFrame:rect];
+	label.tag = NAME_TAG;
+	label.font = [UIFont boldSystemFontOfSize:MAIN_FONT_SIZE];
+	label.adjustsFontSizeToFitWidth = YES;
+	[cell.contentView addSubview:label];
+	label.highlightedTextColor = [UIColor whiteColor];
+	[label release];
+	
+	// Create a label for the time.
+	rect = CGRectMake(MIDDLE_COLUMN_OFFSET, (ROW_HEIGHT - LABEL_HEIGHT) / 2.0, MIDDLE_COLUMN_WIDTH, LABEL_HEIGHT);
+	label = [[UILabel alloc] initWithFrame:rect];
+	label.tag = TIME_TAG;
+	label.font = [UIFont systemFontOfSize:MAIN_FONT_SIZE];
+	label.textAlignment = UITextAlignmentRight;
+	[cell.contentView addSubview:label];
+	label.highlightedTextColor = [UIColor whiteColor];
+	[label release];
+	
+	return cell;
 }
+
+- (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
+    
+    /*
+	 Cache the formatter. Normally you would use one of the date formatter styles (such as NSDateFormatterShortStyle), but here we want a specific format that excludes seconds.
+	 */
+	static NSDateFormatter *dateFormatter = nil;
+	if (dateFormatter == nil) {
+		dateFormatter = [[NSDateFormatter alloc] init];
+		[dateFormatter setDateFormat:@"h:mm a"];
+	}
+	
+	// Get the time zones for the region for the section
+	UILabel *label;
+	
+	// Set the locale name.
+	label = (UILabel *)[cell viewWithTag:NAME_TAG];
+	label.text = @"天気";
+	
+	// Set the time.
+	label = (UILabel *)[cell viewWithTag:TIME_TAG];
+	label.text = @"時間";
+	
+	// Set the image.
+	UIImageView *imageView = (UIImageView *)[cell viewWithTag:IMAGE_TAG];
+	imageView.image = [[UIImage imageNamed:@"6-12PM.png"] retain];
+    
+}    
 
 /*
 // Override to support conditional editing of the table view.
