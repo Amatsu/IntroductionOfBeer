@@ -16,25 +16,7 @@
 @implementation MainListTableController
 
 #define SECTION_HEIGHT 30   //セクションの高さ
-#define ROW_HEIGHT 60       //行の田坂
-
-#define NAME_TAG 1
-#define TIME_TAG 2
-#define IMAGE_TAG 3
-
-#define LEFT_COLUMN_OFFSET 10.0
-#define LEFT_COLUMN_WIDTH 160.0
-
-#define MIDDLE_COLUMN_OFFSET 170.0
-#define MIDDLE_COLUMN_WIDTH 90.0
-
-#define RIGHT_COLUMN_OFFSET 280.0
-
-#define MAIN_FONT_SIZE 16.0
-#define LABEL_HEIGHT 26.0
-
-#define IMAGE_SIDE 30.0
-
+#define ROW_HEIGHT 60       //行の高さ
 
 //カテゴリ一覧
 @synthesize categoryList;
@@ -237,15 +219,30 @@
 	return cell;
 }
 
+
+#define NAME_TAG 1
+#define TIME_TAG 2
+#define IMAGE_TAG 3
+
+//左の列位置
+#define LEFT_COLUMN_OFFSET 10.0
+#define LEFT_COLUMN_WIDTH 30.0
+
+//中央の列位置
+#define MIDDLE_COLUMN_OFFSET 50.0
+#define MIDDLE_COLUMN_WIDTH 100.0
+
+//右の列位置
+#define RIGHT_COLUMN_OFFSET 220.0
+#define RIGHT_COLUMN_WIDTH 80.0
+
+//フォントサイズ等々
+#define MAIN_FONT_SIZE 16.0
+#define LABEL_HEIGHT 26.0
+#define IMAGE_SIDE 30.0
+
 - (UITableViewCell *)tableViewCellWithReuseIdentifier:(NSString *)identifier 
 {
-    
-//    for (Beer *beer in [[categoryList objectAtIndex:0] beerList]) {
-//           NSLog(@"%@",beer.beerName);   
-//    }
-    
-//    cell.textLabel.text = [NSString stringWithFormat:@"%d",[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] commodityID]];
-//
     
     /*
 	 Create an instance of UITableViewCell and add tagged subviews for the name, local time, and quarter image of the time zone.
@@ -259,7 +256,7 @@
 	CGRect rect;
     
     // Create an image view for the quarter image.
-	rect = CGRectMake(RIGHT_COLUMN_OFFSET, (ROW_HEIGHT - IMAGE_SIDE) / 2.0, IMAGE_SIDE, IMAGE_SIDE);
+	rect = CGRectMake(LEFT_COLUMN_OFFSET, (ROW_HEIGHT - IMAGE_SIDE) / 2.0, IMAGE_SIDE, IMAGE_SIDE);
     
 	UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect];
 	imageView.tag = IMAGE_TAG;
@@ -267,7 +264,7 @@
 	[imageView release];	
 	
 	// Create a label for the time zone name.
-	rect = CGRectMake(LEFT_COLUMN_OFFSET, (ROW_HEIGHT - LABEL_HEIGHT) / 2.0, LEFT_COLUMN_WIDTH, LABEL_HEIGHT);
+	rect = CGRectMake(MIDDLE_COLUMN_OFFSET, (ROW_HEIGHT - LABEL_HEIGHT) / 2.0, MIDDLE_COLUMN_WIDTH, LABEL_HEIGHT);
 	label = [[UILabel alloc] initWithFrame:rect];
 	label.tag = NAME_TAG;
 	label.font = [UIFont boldSystemFontOfSize:MAIN_FONT_SIZE];
@@ -277,7 +274,7 @@
 	[label release];
 	
 	// Create a label for the time.
-	rect = CGRectMake(MIDDLE_COLUMN_OFFSET, (ROW_HEIGHT - LABEL_HEIGHT) / 2.0, MIDDLE_COLUMN_WIDTH, LABEL_HEIGHT);
+	rect = CGRectMake(RIGHT_COLUMN_OFFSET, (ROW_HEIGHT - LABEL_HEIGHT) / 2.0, RIGHT_COLUMN_WIDTH, LABEL_HEIGHT);
 	label = [[UILabel alloc] initWithFrame:rect];
 	label.tag = TIME_TAG;
 	label.font = [UIFont systemFontOfSize:MAIN_FONT_SIZE];

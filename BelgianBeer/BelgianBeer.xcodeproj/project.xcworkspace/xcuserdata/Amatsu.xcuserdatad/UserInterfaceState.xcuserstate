@@ -4380,9 +4380,9 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>337396969.92949998</real>
-		<string>{3074, 1833}</string>
-		<string>{3448, 0}</string>
+		<real>337397443.131037</real>
+		<string>{7602, 1816}</string>
+		<string>{7148, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -10480,7 +10480,7 @@
 				<integer>737</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>337334715.50994003</real>
+			<real>337397420.757186</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -10491,7 +10491,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Yesterday at 17:05</string>
+		<string>Today at 10:30</string>
 		<integer>234</integer>
 		<string>BelgianBeer</string>
 		<dict>
@@ -12372,10 +12372,10 @@
 				</dict>
 			</array>
 		</dict>
-		<real>337396969.93578202</real>
-		<string>{3074, 1833}</string>
-		<string>{3448, 0}</string>
-		<string>-viewDidLoad</string>
+		<real>337397443.13162303</real>
+		<string>{7602, 1816}</string>
+		<string>{7148, 0}</string>
+		<string>@implementation MainListTableController</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
 			<key>$class</key>
