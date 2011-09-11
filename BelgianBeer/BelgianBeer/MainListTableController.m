@@ -99,7 +99,7 @@
     if ([db open]) {
         [db setShouldCacheStatements:YES];
         
-        NSString* sql = @"SELECT cate.category_id,cate.name as category_name,cate.explanation as category_explanation,com.commodity_id, com.name as commodity_name,com.explanation as commodity_explanation FROM Commodity com INNER JOIN Category cate On com.category_ID = cate.Category_ID";
+        NSString* sql = @"SELECT cate.category_id,cate.name as category_name,cate.explanation as category_explanation,com.commodity_id, com.name as commodity_name,com.explanation as commodity_explanation FROM Commodity com INNER JOIN Category cate On com.category_ID = cate.Category_ID Order by cate.category_id ASC,com.commodity_id ASC";
         
         //カテゴリ一覧を生成
         categoryList = [[NSMutableArray alloc]init];
@@ -107,16 +107,27 @@
         // SELECT
         FMResultSet *rs = [db executeQuery:sql];
         
+        int beforeCategoryId = -1;
+        BeerCategory *category;
+        Beer *beer;
         while ([rs next]) {
             
-            //カテゴリを生成
-            BeerCategory *category = [[BeerCategory alloc] init];
-            [category initParameter:[rs intForColumn:@"Category_id"] 
-                               name:[[rs stringForColumn:@"category_name"] retain]
-                                exp:[[rs stringForColumn:@"category_explanation"] retain]];
+            if (beforeCategoryId != [rs intForColumn:@"Category_id"]) {
+                
+                beforeCategoryId = [rs intForColumn:@"Category_id"];
+                
+                //カテゴリを生成
+                category = [[BeerCategory alloc] init];
+                [category initParameter:[rs intForColumn:@"Category_id"] 
+                                   name:[[rs stringForColumn:@"category_name"] retain]
+                                    exp:[[rs stringForColumn:@"category_explanation"] retain]];
+                
+                //生成したカテゴリを追加
+                [categoryList addObject:category];
+            }
             
             //ビールを生成
-            Beer *beer = [[Beer alloc]init];
+            beer = [[Beer alloc]init];
             [beer initParameter:[rs intForColumn:@"Commodity_id"]
                            name:[[rs stringForColumn:@"commodity_name"] retain]
                             exp:[[rs stringForColumn:@"commodity_explanation"] retain]];
@@ -124,9 +135,6 @@
             
             //カテゴリにビールを追加
             [category.beerList addObject:beer];
-            
-            //生成したカテゴリを追加
-            [categoryList addObject:category];
             
         }
         
@@ -295,13 +303,14 @@
 	// Get the time zones for the region for the section
 	UILabel *label;
 	
-	// Set the locale name.
+	// Set the beer name.
 	label = (UILabel *)[cell viewWithTag:NAME_TAG];
 	label.text = [[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerName];
 	
-	// Set the time.
+	// Set the star.
 	label = (UILabel *)[cell viewWithTag:TIME_TAG];
-	label.text =  [[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerExplanation];
+//	label.text =  [[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerExplanation];
+    label.text = @"☆☆★★★";
 	
 	// Set the image.
 	UIImageView *imageView = (UIImageView *)[cell viewWithTag:IMAGE_TAG];
