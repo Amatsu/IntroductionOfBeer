@@ -48,6 +48,8 @@
 		0176F7941416491300018748 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F7911416491300018748 /* FMResultSet.m */; };
 		0176F79B141654B200018748 /* BeerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F79A141654B200018748 /* BeerCategory.m */; };
 		0176F7A514178C7700018748 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F7A414178C7700018748 /* Beer.m */; };
+		01A26BD4141C475D00A4740D /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A26BD2141C475D00A4740D /* DetailTableViewController.m */; };
+		01A26BD5141C475D00A4740D /* DetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A26BD3141C475D00A4740D /* DetailTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,9 @@
 		0176F79A141654B200018748 /* BeerCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerCategory.m; sourceTree = "<group>"; };
 		0176F7A314178C7700018748 /* Beer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beer.h; sourceTree = "<group>"; };
 		0176F7A414178C7700018748 /* Beer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beer.m; sourceTree = "<group>"; };
+		01A26BD1141C475D00A4740D /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		01A26BD2141C475D00A4740D /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
+		01A26BD3141C475D00A4740D /* DetailTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +249,9 @@
 				0176F77B141640BB00018748 /* DetailViewController.h */,
 				0176F77C141640BC00018748 /* DetailViewController.m */,
 				0176F77D141640BC00018748 /* DetailViewController.xib */,
+				01A26BD1141C475D00A4740D /* DetailTableViewController.h */,
+				01A26BD2141C475D00A4740D /* DetailTableViewController.m */,
+				01A26BD3141C475D00A4740D /* DetailTableViewController.xib */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -391,6 +399,7 @@
 				01723779141B282300C4C690 /* Icon.png in Resources */,
 				0172377A141B282300C4C690 /* Icon@2x.png in Resources */,
 				0172377B141B282300C4C690 /* iTunesArtwork in Resources */,
+				01A26BD5141C475D00A4740D /* DetailTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +446,7 @@
 				0176F7941416491300018748 /* FMResultSet.m in Sources */,
 				0176F79B141654B200018748 /* BeerCategory.m in Sources */,
 				0176F7A514178C7700018748 /* Beer.m in Sources */,
+				01A26BD4141C475D00A4740D /* DetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

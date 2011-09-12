@@ -7,7 +7,7 @@
 //
 
 #import "MainListTableController.h"
-#import "DetailViewController.h"
+#import "DetailTableViewController.h"
 #import "FMDatabase.h"
 #import "FMDatabaseAdditions.h"
 #import "BeerCategory.h"
@@ -359,11 +359,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    DetailViewController *detailViewController = [DetailViewController alloc];
+    DetailTableViewController *detailView = [[DetailTableViewController alloc]init];
+    //DetailViewController *detailView = [[DetailViewController alloc]init];
     
     // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
+    [self.navigationController pushViewController:detailView animated:YES];
+    [detailView release];
+    
     
     //選択をおこなった行番号が取得できる。
     //番号を元に別のViewをpush（呼び出す）
