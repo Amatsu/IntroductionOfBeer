@@ -39,8 +39,6 @@
 		0176F77514163F7400018748 /* MainListNaviController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F77314163F7400018748 /* MainListNaviController.xib */; };
 		0176F77914163FC000018748 /* MainListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F77714163FC000018748 /* MainListTableController.m */; };
 		0176F77A14163FC000018748 /* MainListTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F77814163FC000018748 /* MainListTableController.xib */; };
-		0176F77E141640BC00018748 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F77C141640BC00018748 /* DetailViewController.m */; };
-		0176F77F141640BC00018748 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F77D141640BC00018748 /* DetailViewController.xib */; };
 		0176F7881416472E00018748 /* Beer.db in Resources */ = {isa = PBXBuildFile; fileRef = 0176F7871416472E00018748 /* Beer.db */; };
 		0176F78A141648D400018748 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F789141648D400018748 /* libsqlite3.0.dylib */; };
 		0176F7921416491300018748 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F78D1416491300018748 /* FMDatabase.m */; };
@@ -50,6 +48,7 @@
 		0176F7A514178C7700018748 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F7A414178C7700018748 /* Beer.m */; };
 		01A26BD4141C475D00A4740D /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A26BD2141C475D00A4740D /* DetailTableViewController.m */; };
 		01A26BD5141C475D00A4740D /* DetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A26BD3141C475D00A4740D /* DetailTableViewController.xib */; };
+		01A26BDA141E5C8300A4740D /* sample.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A26BD9141E5C8300A4740D /* sample.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,9 +100,6 @@
 		0176F77614163FC000018748 /* MainListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainListTableController.h; sourceTree = "<group>"; };
 		0176F77714163FC000018748 /* MainListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainListTableController.m; sourceTree = "<group>"; };
 		0176F77814163FC000018748 /* MainListTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainListTableController.xib; sourceTree = "<group>"; };
-		0176F77B141640BB00018748 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		0176F77C141640BC00018748 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		0176F77D141640BC00018748 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		0176F7871416472E00018748 /* Beer.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Beer.db; path = BelgianBeer/Beer.db; sourceTree = "<group>"; };
 		0176F789141648D400018748 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		0176F78C1416491300018748 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -119,6 +115,7 @@
 		01A26BD1141C475D00A4740D /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
 		01A26BD2141C475D00A4740D /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 		01A26BD3141C475D00A4740D /* DetailTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewController.xib; sourceTree = "<group>"; };
+		01A26BD9141E5C8300A4740D /* sample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sample.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,12 +243,10 @@
 		0176F780141641F800018748 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
-				0176F77B141640BB00018748 /* DetailViewController.h */,
-				0176F77C141640BC00018748 /* DetailViewController.m */,
-				0176F77D141640BC00018748 /* DetailViewController.xib */,
 				01A26BD1141C475D00A4740D /* DetailTableViewController.h */,
 				01A26BD2141C475D00A4740D /* DetailTableViewController.m */,
 				01A26BD3141C475D00A4740D /* DetailTableViewController.xib */,
+				01A26BD9141E5C8300A4740D /* sample.xib */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -385,7 +380,6 @@
 				0176F7541416372A00018748 /* FavoriteViewController.xib in Resources */,
 				0176F77514163F7400018748 /* MainListNaviController.xib in Resources */,
 				0176F77A14163FC000018748 /* MainListTableController.xib in Resources */,
-				0176F77F141640BC00018748 /* DetailViewController.xib in Resources */,
 				0176F7881416472E00018748 /* Beer.db in Resources */,
 				01723770141B282200C4C690 /* 12-6AM.png in Resources */,
 				01723771141B282200C4C690 /* 12-6PM.png in Resources */,
@@ -400,6 +394,7 @@
 				0172377A141B282300C4C690 /* Icon@2x.png in Resources */,
 				0172377B141B282300C4C690 /* iTunesArtwork in Resources */,
 				01A26BD5141C475D00A4740D /* DetailTableViewController.xib in Resources */,
+				01A26BDA141E5C8300A4740D /* sample.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +435,6 @@
 				0176F7531416372A00018748 /* FavoriteViewController.m in Sources */,
 				0176F77414163F7400018748 /* MainListNaviController.m in Sources */,
 				0176F77914163FC000018748 /* MainListTableController.m in Sources */,
-				0176F77E141640BC00018748 /* DetailViewController.m in Sources */,
 				0176F7921416491300018748 /* FMDatabase.m in Sources */,
 				0176F7931416491300018748 /* FMDatabaseAdditions.m in Sources */,
 				0176F7941416491300018748 /* FMResultSet.m in Sources */,

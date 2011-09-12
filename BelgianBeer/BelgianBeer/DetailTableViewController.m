@@ -89,7 +89,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 2;
+    return 4;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -100,9 +100,9 @@
 {
     //cellの高さ
     if (indexPath.row == 0) {
-        return 200;
+        return 210;
     }else{
-        return 120;    
+        return 160;    
     }
 }
 
@@ -118,14 +118,40 @@
     // Configure the cell...
     CGRect rect;
     
-    rect = CGRectMake(10, (60-50) / 2.0, 200, 200);
+    
     if (indexPath.row == 0) {
-        UIImageView *imageView;
-        imageView = [[UIImageView alloc] initWithFrame:rect];
-        [imageView setImage:[[UIImage imageNamed:@"6-12PM.png"] retain]];
-        [cell.contentView addSubview:imageView];
-        [imageView release]; 
+        
+        rect = CGRectMake(10, (60-50) / 2.0, 200, 200);
+        UIImageView *imageView1;
+        imageView1 = [[UIImageView alloc] initWithFrame:rect];
+        [imageView1 setImage:[[UIImage imageNamed:@"6-12AM.png"] retain]];
+        
+        rect = CGRectMake(210, (60-50) / 2.0, 200, 200);
+        UIImageView *imageView2;
+        imageView2 = [[UIImageView alloc] initWithFrame:rect];
+        [imageView2 setImage:[[UIImage imageNamed:@"6-12PM.png"] retain]];
+        
+         rect = CGRectMake(10, (60-50) / 2.0, 200, 200);
+        UIScrollView *scrollView;
+        scrollView = [[UIScrollView alloc] initWithFrame:rect];
+        [scrollView addSubview:imageView1];
+        [scrollView addSubview:imageView2];
+        scrollView.pagingEnabled = YES;
+        scrollView.contentSize = CGSizeMake(200 * 2, scrollView.frame.size.height);
+        scrollView.showsHorizontalScrollIndicator = NO;
+        scrollView.showsVerticalScrollIndicator = NO;
+        scrollView.backgroundColor = [UIColor blackColor];
+
+        
+        //セルのViewに追加
+        [cell.contentView addSubview:scrollView];
+        
+        [imageView1 release];
+        [imageView2 release];
+        [scrollView release];
+        
     }else{
+        rect = CGRectMake(10, (60-50) / 2.0, 200,150);
         UITextView *textView;
         textView = [[UITextView alloc] initWithFrame:rect];
         textView.font = [UIFont boldSystemFontOfSize:16];
