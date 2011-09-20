@@ -48,7 +48,8 @@
 		0176F7A514178C7700018748 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F7A414178C7700018748 /* Beer.m */; };
 		01A26BD4141C475D00A4740D /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A26BD2141C475D00A4740D /* DetailTableViewController.m */; };
 		01A26BD5141C475D00A4740D /* DetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A26BD3141C475D00A4740D /* DetailTableViewController.xib */; };
-		01A26BDA141E5C8300A4740D /* sample.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A26BD9141E5C8300A4740D /* sample.xib */; };
+		01B2B1B21428D1B700263745 /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B2B1B11428D1B700263745 /* ShareCell.m */; };
+		01B2B1B41428D31D00263745 /* ShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B2B1B31428D31D00263745 /* ShareCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +116,9 @@
 		01A26BD1141C475D00A4740D /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
 		01A26BD2141C475D00A4740D /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 		01A26BD3141C475D00A4740D /* DetailTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewController.xib; sourceTree = "<group>"; };
-		01A26BD9141E5C8300A4740D /* sample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sample.xib; sourceTree = "<group>"; };
+		01B2B1B01428D1B700263745 /* ShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCell.h; sourceTree = "<group>"; };
+		01B2B1B11428D1B700263745 /* ShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCell.m; sourceTree = "<group>"; };
+		01B2B1B31428D31D00263745 /* ShareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,7 +249,9 @@
 				01A26BD1141C475D00A4740D /* DetailTableViewController.h */,
 				01A26BD2141C475D00A4740D /* DetailTableViewController.m */,
 				01A26BD3141C475D00A4740D /* DetailTableViewController.xib */,
-				01A26BD9141E5C8300A4740D /* sample.xib */,
+				01B2B1B01428D1B700263745 /* ShareCell.h */,
+				01B2B1B31428D31D00263745 /* ShareCell.xib */,
+				01B2B1B11428D1B700263745 /* ShareCell.m */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -387,7 +392,6 @@
 				01723773141B282200C4C690 /* 6-12PM.png in Resources */,
 				0172377B141B282300C4C690 /* iTunesArtwork in Resources */,
 				01A26BD5141C475D00A4740D /* DetailTableViewController.xib in Resources */,
-				01A26BDA141E5C8300A4740D /* sample.xib in Resources */,
 				011987411426F90C0063A482 /* Default.png in Resources */,
 				011987421426F90C0063A482 /* Icon-72.png in Resources */,
 				011987431426F90C0063A482 /* Icon-Small-50.png in Resources */,
@@ -395,6 +399,7 @@
 				011987451426F90C0063A482 /* Icon-Small@2x.png in Resources */,
 				011987461426F90C0063A482 /* Icon.png in Resources */,
 				011987471426F90C0063A482 /* Icon@2x.png in Resources */,
+				01B2B1B41428D31D00263745 /* ShareCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +446,7 @@
 				0176F79B141654B200018748 /* BeerCategory.m in Sources */,
 				0176F7A514178C7700018748 /* Beer.m in Sources */,
 				01A26BD4141C475D00A4740D /* DetailTableViewController.m in Sources */,
+				01B2B1B21428D1B700263745 /* ShareCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShareCell.h"
 
-@interface DetailTableViewController : UITableViewController
+@interface DetailTableViewController : UITableViewController{
+    ShareCell *shareCell;			//	提案用セル
+}
+
+@property (nonatomic, assign) IBOutlet ShareCell* shareCell;
 
 @end

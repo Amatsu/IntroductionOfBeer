@@ -10,6 +10,8 @@
 
 @implementation DetailTableViewController
 
+@synthesize shareCell;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -102,7 +104,7 @@
     if (indexPath.row == 0) {
         return 210;
     }else{
-        return 160;    
+        return 200;    
     }
 }
 
@@ -117,7 +119,6 @@
     
     // Configure the cell...
     CGRect rect;
-    
     
     if (indexPath.row == 0) {
         
@@ -149,9 +150,13 @@
         [imageView1 release];
         [imageView2 release];
         [scrollView release];
-        
+    }else if(indexPath.row == 2){
+        //カスタムセル
+            [[NSBundle mainBundle] loadNibNamed:@"ShareCell" owner:self options:nil];
+            cell = shareCell;
+            self.shareCell = nil;
     }else{
-        rect = CGRectMake(10, (60-50) / 2.0, 200,150);
+        rect = CGRectMake(10, (60-50) / 2.0, 200,200);
         UITextView *textView;
         textView = [[UITextView alloc] initWithFrame:rect];
         textView.font = [UIFont boldSystemFontOfSize:16];
