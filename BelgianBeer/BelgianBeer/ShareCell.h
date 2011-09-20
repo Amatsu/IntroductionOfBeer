@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ShareCell : UITableViewCell{
-    UILabel*	nameLabel;		//	名前
-	UILabel*	voteCountLabel;		//	支持数
+    
+    IBOutlet UIButton *btnShare;
+    IBOutlet UIButton *btnCommnet;
+    
 }
 
-@property (nonatomic, retain) IBOutlet UILabel*	nameLabel;
-@property (nonatomic, retain) IBOutlet UILabel*	voteCountLabel;
+@property (nonatomic, assign) UIButton *btnShare;
+@property (nonatomic, assign) UIButton *btnComment;
+
 
 @end

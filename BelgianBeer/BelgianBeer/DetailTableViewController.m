@@ -91,7 +91,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 4;
+    return 3;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -104,7 +104,7 @@
     if (indexPath.row == 0) {
         return 210;
     }else{
-        return 200;    
+        return 250;    
     }
 }
 

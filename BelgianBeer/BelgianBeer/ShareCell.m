@@ -10,8 +10,8 @@
 
 @implementation ShareCell
 
-@synthesize nameLabel;
-@synthesize voteCountLabel;
+@synthesize btnShare;
+@synthesize btnComment;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -30,8 +30,6 @@
 }
 
 - (void)dealloc {
-	[nameLabel release];
-	[voteCountLabel release];
     [super dealloc];
 }
 

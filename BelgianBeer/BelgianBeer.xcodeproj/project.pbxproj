@@ -250,8 +250,8 @@
 				01A26BD2141C475D00A4740D /* DetailTableViewController.m */,
 				01A26BD3141C475D00A4740D /* DetailTableViewController.xib */,
 				01B2B1B01428D1B700263745 /* ShareCell.h */,
-				01B2B1B31428D31D00263745 /* ShareCell.xib */,
 				01B2B1B11428D1B700263745 /* ShareCell.m */,
+				01B2B1B31428D31D00263745 /* ShareCell.xib */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
