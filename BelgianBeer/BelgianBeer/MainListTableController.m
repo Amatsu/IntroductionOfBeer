@@ -81,10 +81,25 @@
     if ([db open]) {
         [db setShouldCacheStatements:YES];
         
-        NSString* sql = @"SELECT cate.category_id,cate.name as category_name,cate.explanation as category_explanation,com.commodity_id, com.name as commodity_name,com.explanation as commodity_explanation FROM Commodity com INNER JOIN Category cate On com.category_ID = cate.Category_ID Order by cate.category_id ASC,com.commodity_id ASC";
+        NSMutableString *sql = [NSMutableString string];
+        [sql appendString:@" SELECT "];
+        [sql appendString:@"        cate.category_id"];
+        [sql appendString:@"      , cate.name as category_name"];
+        [sql appendString:@"      , cate.explanation as category_explanation"];
+        [sql appendString:@"      , com.commodity_id"];
+        [sql appendString:@"      , com.name as commodity_name"];
+        [sql appendString:@"      , com.explanation as commodity_explanation"];
+        [sql appendString:@"      , com.Image as commodity_image"];
+        [sql appendString:@"  FROM Commodity com INNER JOIN Category cate"];
+        [sql appendString:@"                     ON com.category_ID = cate.Category_ID"];
+        [sql appendString:@" Order By"];
+        [sql appendString:@"       cate.category_id ASC,com.commodity_id ASC"];
         
         //カテゴリ一覧を生成
         categoryList = [[NSMutableArray alloc]init];
+        
+        //sqｌの中身の確認
+        //NSLog(@"%@",sql);
         
         // SELECT
         FMResultSet *rs = [db executeQuery:sql];
@@ -112,7 +127,8 @@
             beer = [[Beer alloc]init];
             [beer initParameter:[rs intForColumn:@"Commodity_id"]
                            name:[[rs stringForColumn:@"commodity_name"] retain]
-                            exp:[[rs stringForColumn:@"commodity_explanation"] retain]];
+                            exp:[[rs stringForColumn:@"commodity_explanation"] retain]
+                            img:[[rs stringForColumn:@"commodity_image"] retain]];
 
             
             //カテゴリにビールを追加
@@ -126,12 +142,12 @@
         NSLog(@"Could not open db.");
     }
     
-    NSLog(@"%d",[[categoryList objectAtIndex:0] categoryID]);
-    NSLog(@"%@",[[categoryList objectAtIndex:0] categoryName]);
-    NSLog(@"%@",[[categoryList objectAtIndex:0] categroyExplanation]);
-    
-    NSLog(@"%@",[[[[categoryList objectAtIndex:0] beerList] objectAtIndex:0] beerName]);
-    NSLog(@"%@",[[[[categoryList objectAtIndex:0] beerList] objectAtIndex:0] beerExplanation]);    
+//    NSLog(@"%d",[[categoryList objectAtIndex:0] categoryID]);
+//    NSLog(@"%@",[[categoryList objectAtIndex:0] categoryName]);
+//    NSLog(@"%@",[[categoryList objectAtIndex:0] categroyExplanation]);
+//    
+//    NSLog(@"%@",[[[[categoryList objectAtIndex:0] beerList] objectAtIndex:0] beerName]);
+//    NSLog(@"%@",[[[[categoryList objectAtIndex:0] beerList] objectAtIndex:0] beerExplanation]);    
 
     
  }
@@ -221,7 +237,7 @@
 
 
 #define NAME_TAG 1
-#define TIME_TAG 2
+#define STAR_TAG 2
 #define IMAGE_TAG 3
 
 //左の列位置
@@ -276,7 +292,7 @@
 	// Create a label for the time.
 	rect = CGRectMake(RIGHT_COLUMN_OFFSET, (ROW_HEIGHT - LABEL_HEIGHT) / 2.0, RIGHT_COLUMN_WIDTH, LABEL_HEIGHT);
 	label = [[UILabel alloc] initWithFrame:rect];
-	label.tag = TIME_TAG;
+	label.tag = STAR_TAG;
 	label.font = [UIFont systemFontOfSize:MAIN_FONT_SIZE];
 	label.textAlignment = UITextAlignmentRight;
 	[cell.contentView addSubview:label];
@@ -287,16 +303,7 @@
 }
 
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
-    
-    /*
-	 Cache the formatter. Normally you would use one of the date formatter styles (such as NSDateFormatterShortStyle), but here we want a specific format that excludes seconds.
-	 */
-	static NSDateFormatter *dateFormatter = nil;
-	if (dateFormatter == nil) {
-		dateFormatter = [[NSDateFormatter alloc] init];
-		[dateFormatter setDateFormat:@"h:mm a"];
-	}
-	
+
 	// Get the time zones for the region for the section
 	UILabel *label;
 	
@@ -304,14 +311,13 @@
 	label = (UILabel *)[cell viewWithTag:NAME_TAG];
 	label.text = [[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerName];
 	
-	// Set the star.
-	label = (UILabel *)[cell viewWithTag:TIME_TAG];
-//	label.text =  [[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerExplanation];
+	// Set the Star.
+	label = (UILabel *)[cell viewWithTag:STAR_TAG];
     label.text = @"☆☆★★★";
 	
 	// Set the image.
 	UIImageView *imageView = (UIImageView *)[cell viewWithTag:IMAGE_TAG];
-	imageView.image = [[UIImage imageNamed:@"6-12PM.png"] retain];
+	imageView.image = [[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerImage];
     
 }    
 
@@ -360,9 +366,8 @@
 {
     
     DetailTableViewController *detailView = [[DetailTableViewController alloc]init];
-    //DetailViewController *detailView = [[DetailViewController alloc]init];
     
-    // Pass the selected object to the new view controller.
+    //詳細Viewを表示する。
     [self.navigationController pushViewController:detailView animated:YES];
     [detailView release];
     

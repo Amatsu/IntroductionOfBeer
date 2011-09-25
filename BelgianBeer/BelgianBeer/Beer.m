@@ -13,13 +13,14 @@
 @synthesize commodityID;
 @synthesize beerName;
 @synthesize beerExplanation;
+@synthesize beerImage;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         // Initialization code here.
-        return [self initParameter:-1 name:@"initName" exp:@"initExp"];
+        return [self initParameter:-1 name:@"initName" exp:@"initExp" img:@"no-image.png"];
 
     }
     
@@ -28,12 +29,13 @@
 
 - (id)initParameter:(int)seq
                name:(NSString *)name
-                exp:(NSString *) exp{
+                exp:(NSString *) exp
+                img:(NSString *) img{
     
     commodityID = seq;
     beerName = name;
     beerExplanation = exp;
-    
+    beerImage = [UIImage imageNamed:img];
     return self;
 }
 

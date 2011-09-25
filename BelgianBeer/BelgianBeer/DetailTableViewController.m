@@ -101,11 +101,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //cellの高さ
-    if (indexPath.row == 0) {
-        return 210;
-    }else{
-        return 250;    
-    }
+    return 250;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -113,14 +109,33 @@
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
     
     // Configure the cell...
     CGRect rect;
     
+    //上から順に 0:text 1:image 2:other
+    
     if (indexPath.row == 0) {
+        
+        if (cell == nil) {
+            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        }
+        
+        rect = CGRectMake(10, (60-50) / 2.0, 200,200);
+        UITextView *textView;
+        textView = [[UITextView alloc] initWithFrame:rect];
+        textView.font = [UIFont boldSystemFontOfSize:16];
+        textView.editable = FALSE;
+        textView.scrollEnabled = FALSE;
+        [cell.contentView addSubview:textView];
+        textView.text = @"Override to support conditional editing of the table view.Override to support conditional editing of the table view.Override to support conditional editing of the table view.Override to support conditional editing of the table view.";
+        [textView release];   
+        
+    }else if(indexPath.row == 1){
+        
+        if (cell == nil) {
+            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        }
         
         rect = CGRectMake(10, (60-50) / 2.0, 200, 200);
         UIImageView *imageView1;
@@ -132,7 +147,7 @@
         imageView2 = [[UIImageView alloc] initWithFrame:rect];
         [imageView2 setImage:[[UIImage imageNamed:@"6-12PM.png"] retain]];
         
-         rect = CGRectMake(10, (60-50) / 2.0, 200, 200);
+        rect = CGRectMake(10, (60-50) / 2.0, 200, 200);
         UIScrollView *scrollView;
         scrollView = [[UIScrollView alloc] initWithFrame:rect];
         [scrollView addSubview:imageView1];
@@ -142,7 +157,7 @@
         scrollView.showsHorizontalScrollIndicator = NO;
         scrollView.showsVerticalScrollIndicator = NO;
         scrollView.backgroundColor = [UIColor blackColor];
-
+        
         
         //セルのViewに追加
         [cell.contentView addSubview:scrollView];
@@ -150,21 +165,19 @@
         [imageView1 release];
         [imageView2 release];
         [scrollView release];
+        
     }else if(indexPath.row == 2){
         //カスタムセル
+        if (cell == nil) {
             [[NSBundle mainBundle] loadNibNamed:@"ShareCell" owner:self options:nil];
             cell = shareCell;
             self.shareCell = nil;
+        }
+        
     }else{
-        rect = CGRectMake(10, (60-50) / 2.0, 200,200);
-        UITextView *textView;
-        textView = [[UITextView alloc] initWithFrame:rect];
-        textView.font = [UIFont boldSystemFontOfSize:16];
-        textView.editable = FALSE;
-        textView.scrollEnabled = FALSE;
-        [cell.contentView addSubview:textView];
-        textView.text = @"Override to support conditional editing of the table view.Override to support conditional editing of the table view.Override to support conditional editing of the table view.Override to support conditional editing of the table view.";
-        [textView release];        
+        if (cell == nil) {
+            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        }
     }
 
     return cell;

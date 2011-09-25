@@ -12,14 +12,17 @@
     int commodityID;
     NSString *beerName;
     NSString *beerExplanation;
+    UIImage  *beerImage;
 }
 
 
 @property (readonly)int commodityID;
 @property (readonly)NSString *beerName;
 @property (readonly)NSString *beerExplanation;
+@property (readonly)UIImage *beerImage;
 
 - (id) initParameter:(int) seq
                 name:(NSString *)name
-                 exp:(NSString *)exp;
+                 exp:(NSString *)exp
+                 img:(NSString *)img;
 @end
