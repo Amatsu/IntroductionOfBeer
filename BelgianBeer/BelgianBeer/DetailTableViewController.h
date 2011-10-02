@@ -10,7 +10,7 @@
 #import "ShareCell.h"
 
 @interface DetailTableViewController : UITableViewController{
-    ShareCell *shareCell;			//	提案用セル
+    ShareCell *shareCell;
 }
 
 @property (nonatomic, assign) IBOutlet ShareCell* shareCell;

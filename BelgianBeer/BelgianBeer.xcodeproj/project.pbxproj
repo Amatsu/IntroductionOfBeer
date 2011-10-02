@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010322631438302400D970AE /* BeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010322621438302400D970AE /* BeerCell.xib */; };
+		01032266143833A200D970AE /* BeerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01032265143833A200D970AE /* BeerCell.m */; };
 		011987411426F90C0063A482 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873A1426F90C0063A482 /* Default.png */; };
 		011987421426F90C0063A482 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873B1426F90C0063A482 /* Icon-72.png */; };
 		011987431426F90C0063A482 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873C1426F90C0063A482 /* Icon-Small-50.png */; };
@@ -62,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010322621438302400D970AE /* BeerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeerCell.xib; sourceTree = "<group>"; };
+		01032264143833A100D970AE /* BeerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerCell.h; sourceTree = "<group>"; };
+		01032265143833A200D970AE /* BeerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerCell.m; sourceTree = "<group>"; };
 		0119873A1426F90C0063A482 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0119873B1426F90C0063A482 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		0119873C1426F90C0063A482 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -263,6 +268,9 @@
 				0176F77614163FC000018748 /* MainListTableController.h */,
 				0176F77714163FC000018748 /* MainListTableController.m */,
 				0176F77814163FC000018748 /* MainListTableController.xib */,
+				010322621438302400D970AE /* BeerCell.xib */,
+				01032264143833A100D970AE /* BeerCell.h */,
+				01032265143833A200D970AE /* BeerCell.m */,
 			);
 			name = MainListView;
 			sourceTree = "<group>";
@@ -396,6 +404,7 @@
 				011987461426F90C0063A482 /* Icon.png in Resources */,
 				011987471426F90C0063A482 /* Icon@2x.png in Resources */,
 				01B2B1B41428D31D00263745 /* ShareCell.xib in Resources */,
+				010322631438302400D970AE /* BeerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +452,7 @@
 				0176F7A514178C7700018748 /* Beer.m in Sources */,
 				01A26BD4141C475D00A4740D /* DetailTableViewController.m in Sources */,
 				01B2B1B21428D1B700263745 /* ShareCell.m in Sources */,
+				01032266143833A200D970AE /* BeerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
