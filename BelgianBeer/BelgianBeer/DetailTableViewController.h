@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareCell.h"
+#import "DetailBeerCell.h"
 
 @interface DetailTableViewController : UITableViewController{
     ShareCell *shareCell;
+    DetailBeerCell *detailBeerCell;
     
 }
 
 @property (nonatomic, assign) IBOutlet ShareCell* shareCell;
+@property (nonatomic, assign) IBOutlet DetailBeerCell* detailBeerCell;
 
 @end

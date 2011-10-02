@@ -12,6 +12,8 @@
 		0103226A1438448600D970AE /* Boon_Oude_Gueuze.png in Resources */ = {isa = PBXBuildFile; fileRef = 010322671438448600D970AE /* Boon_Oude_Gueuze.png */; };
 		0103226B1438448600D970AE /* Cantillon_Grand_Cru_Broucse.png in Resources */ = {isa = PBXBuildFile; fileRef = 010322681438448600D970AE /* Cantillon_Grand_Cru_Broucse.png */; };
 		0103226C1438448600D970AE /* Cantillon_Lou_Pepe_Gueuze.png in Resources */ = {isa = PBXBuildFile; fileRef = 010322691438448600D970AE /* Cantillon_Lou_Pepe_Gueuze.png */; };
+		0103227B14388DD000D970AE /* DetailBeerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0103227A14388DD000D970AE /* DetailBeerCell.m */; };
+		0103227D14388DEE00D970AE /* DetailBeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0103227C14388DEE00D970AE /* DetailBeerCell.xib */; };
 		011987411426F90C0063A482 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873A1426F90C0063A482 /* Default.png */; };
 		011987421426F90C0063A482 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873B1426F90C0063A482 /* Icon-72.png */; };
 		011987431426F90C0063A482 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873C1426F90C0063A482 /* Icon-Small-50.png */; };
@@ -69,6 +71,9 @@
 		010322671438448600D970AE /* Boon_Oude_Gueuze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boon_Oude_Gueuze.png; sourceTree = "<group>"; };
 		010322681438448600D970AE /* Cantillon_Grand_Cru_Broucse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cantillon_Grand_Cru_Broucse.png; sourceTree = "<group>"; };
 		010322691438448600D970AE /* Cantillon_Lou_Pepe_Gueuze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cantillon_Lou_Pepe_Gueuze.png; sourceTree = "<group>"; };
+		0103227914388DCF00D970AE /* DetailBeerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailBeerCell.h; sourceTree = "<group>"; };
+		0103227A14388DD000D970AE /* DetailBeerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailBeerCell.m; sourceTree = "<group>"; };
+		0103227C14388DEE00D970AE /* DetailBeerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailBeerCell.xib; sourceTree = "<group>"; };
 		0119873A1426F90C0063A482 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0119873B1426F90C0063A482 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		0119873C1426F90C0063A482 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -248,6 +253,9 @@
 				01A26BD1141C475D00A4740D /* DetailTableViewController.h */,
 				01A26BD2141C475D00A4740D /* DetailTableViewController.m */,
 				01A26BD3141C475D00A4740D /* DetailTableViewController.xib */,
+				0103227914388DCF00D970AE /* DetailBeerCell.h */,
+				0103227A14388DD000D970AE /* DetailBeerCell.m */,
+				0103227C14388DEE00D970AE /* DetailBeerCell.xib */,
 				01B2B1B01428D1B700263745 /* ShareCell.h */,
 				01B2B1B11428D1B700263745 /* ShareCell.m */,
 				01B2B1B31428D31D00263745 /* ShareCell.xib */,
@@ -401,6 +409,7 @@
 				0103226A1438448600D970AE /* Boon_Oude_Gueuze.png in Resources */,
 				0103226B1438448600D970AE /* Cantillon_Grand_Cru_Broucse.png in Resources */,
 				0103226C1438448600D970AE /* Cantillon_Lou_Pepe_Gueuze.png in Resources */,
+				0103227D14388DEE00D970AE /* DetailBeerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +458,7 @@
 				01A26BD4141C475D00A4740D /* DetailTableViewController.m in Sources */,
 				01B2B1B21428D1B700263745 /* ShareCell.m in Sources */,
 				01032266143833A200D970AE /* BeerCell.m in Sources */,
+				0103227B14388DD000D970AE /* DetailBeerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
