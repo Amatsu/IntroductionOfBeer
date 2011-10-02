@@ -34,7 +34,6 @@
 //名称を表示
 -(void)setBeerName:(NSString *)name{
     [self.lblName setText:name];
-    [self.lblName setFont:[UIFont boldSystemFontOfSize:24.0]];
 }
 
 //カナ名称を表示

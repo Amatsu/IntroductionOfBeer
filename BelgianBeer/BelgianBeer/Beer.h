@@ -11,6 +11,7 @@
 @interface Beer : NSObject{
     int commodityID;
     NSString *beerName;
+    NSString *beerKanaName;
     NSString *beerExplanation;
     UIImage  *beerImage;
 }
@@ -18,11 +19,13 @@
 
 @property (readonly)int commodityID;
 @property (readonly)NSString *beerName;
+@property (readonly)NSString *beerKanaName;
 @property (readonly)NSString *beerExplanation;
 @property (readonly)UIImage *beerImage;
 
 - (id) initParameter:(int) seq
                 name:(NSString *)name
+            kanaName:(NSString *)kanaName
                  exp:(NSString *)exp
                  img:(NSString *)img;
 @end

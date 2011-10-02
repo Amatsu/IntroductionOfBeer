@@ -90,6 +90,7 @@
         [sql appendString:@"      , cate.explanation as category_explanation"];
         [sql appendString:@"      , com.commodity_id"];
         [sql appendString:@"      , com.name as commodity_name"];
+        [sql appendString:@"      , com.kana_name as commodity_kana_name"];
         [sql appendString:@"      , com.explanation as commodity_explanation"];
         [sql appendString:@"      , com.Image as commodity_image"];
         [sql appendString:@"  FROM Commodity com INNER JOIN Category cate"];
@@ -129,6 +130,7 @@
             beer = [[Beer alloc]init];
             [beer initParameter:[rs intForColumn:@"Commodity_id"]
                            name:[[rs stringForColumn:@"commodity_name"] retain]
+                       kanaName:[[rs stringForColumn:@"commodity_kana_name"] retain]
                             exp:[[rs stringForColumn:@"commodity_explanation"] retain]
                             img:[[rs stringForColumn:@"commodity_image"] retain]];
 
@@ -235,7 +237,7 @@
         [beerCell setBeerName:[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerName]];
         
         //カナ名称を設定
-        [beerCell setBeerKanaName:[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerName]];
+        [beerCell setBeerKanaName:[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerKanaName]];
         
         //Style名称を設定
         
