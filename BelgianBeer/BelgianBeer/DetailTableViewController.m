@@ -22,6 +22,10 @@
         [[self tableView] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
         //セル選択不可
         [[self tableView] setAllowsSelection:FALSE];
+        
+        //タイトルを設定
+        self.title = NSLocalizedString(@"詳細情報", @"DetailInfoTitle");
+        
     }
     return self;
 }

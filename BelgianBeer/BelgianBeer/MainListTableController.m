@@ -223,14 +223,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
 	
-	static NSString *CellIdentifier = @"Cell";
-	
+	static NSString *CellIdentifier = @"BeerCell";
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
     //カスタムセル
     if (cell == nil) {
         
-        [[NSBundle mainBundle] loadNibNamed:@"BeerCell" owner:self options:nil];
+        [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
         
         //名称を設定
         [beerCell setBeerName:[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerName]];
@@ -246,10 +245,6 @@
         cell = beerCell;
         self.beerCell = nil;
     }
-    
-//	if (cell == nil) {
-//		cell = [self tableViewCellWithReuseIdentifier:CellIdentifier];
-//	}
 	
 	// configureCell:cell forIndexPath: sets the text and image for the cell -- the method is factored out as it's also called during minuted-based updates.
 	//[self configureCell:cell forIndexPath:indexPath];

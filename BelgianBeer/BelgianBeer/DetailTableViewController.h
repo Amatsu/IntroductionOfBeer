@@ -11,6 +11,7 @@
 
 @interface DetailTableViewController : UITableViewController{
     ShareCell *shareCell;
+    
 }
 
 @property (nonatomic, assign) IBOutlet ShareCell* shareCell;
