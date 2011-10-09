@@ -15,6 +15,8 @@
 		0103227B14388DD000D970AE /* DetailBeerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0103227A14388DD000D970AE /* DetailBeerCell.m */; };
 		0103227D14388DEE00D970AE /* DetailBeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0103227C14388DEE00D970AE /* DetailBeerCell.xib */; };
 		0103227F1441AC7600D970AE /* DB設計 in Resources */ = {isa = PBXBuildFile; fileRef = 0103227E1441AC7600D970AE /* DB設計 */; };
+		010322841441ADE900D970AE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010322821441ADE900D970AE /* HomeViewController.m */; };
+		010322851441ADE900D970AE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010322831441ADE900D970AE /* HomeViewController.xib */; };
 		011987411426F90C0063A482 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873A1426F90C0063A482 /* Default.png */; };
 		011987421426F90C0063A482 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873B1426F90C0063A482 /* Icon-72.png */; };
 		011987431426F90C0063A482 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873C1426F90C0063A482 /* Icon-Small-50.png */; };
@@ -76,6 +78,9 @@
 		0103227A14388DD000D970AE /* DetailBeerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailBeerCell.m; sourceTree = "<group>"; };
 		0103227C14388DEE00D970AE /* DetailBeerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailBeerCell.xib; sourceTree = "<group>"; };
 		0103227E1441AC7600D970AE /* DB設計 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "DB設計"; sourceTree = "<group>"; };
+		010322811441ADE900D970AE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		010322821441ADE900D970AE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		010322831441ADE900D970AE /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		0119873A1426F90C0063A482 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0119873B1426F90C0063A482 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		0119873C1426F90C0063A482 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -155,6 +160,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010322801441ADBA00D970AE /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				010322811441ADE900D970AE /* HomeViewController.h */,
+				010322821441ADE900D970AE /* HomeViewController.m */,
+				010322831441ADE900D970AE /* HomeViewController.xib */,
+			);
+			name = HomeView;
+			sourceTree = "<group>";
+		};
 		01723763141B282200C4C690 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +325,7 @@
 		0176F79D1416584B00018748 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				010322801441ADBA00D970AE /* HomeView */,
 				0176F79E1416586F00018748 /* FavoriteView */,
 				0176F7811416421500018748 /* MainListView */,
 			);
@@ -414,6 +430,7 @@
 				0103226C1438448600D970AE /* Cantillon_Lou_Pepe_Gueuze.png in Resources */,
 				0103227D14388DEE00D970AE /* DetailBeerCell.xib in Resources */,
 				0103227F1441AC7600D970AE /* DB設計 in Resources */,
+				010322851441ADE900D970AE /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +480,7 @@
 				01B2B1B21428D1B700263745 /* ShareCell.m in Sources */,
 				01032266143833A200D970AE /* BeerCell.m in Sources */,
 				0103227B14388DD000D970AE /* DetailBeerCell.m in Sources */,
+				010322841441ADE900D970AE /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
