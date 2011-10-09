@@ -38,8 +38,6 @@
 		0176F73F141635F400018748 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0176F73D141635F400018748 /* InfoPlist.strings */; };
 		0176F741141635F500018748 /* BelgianBeerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 0176F740141635F500018748 /* BelgianBeerTests.h */; };
 		0176F743141635F500018748 /* BelgianBeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F742141635F500018748 /* BelgianBeerTests.m */; };
-		0176F7531416372A00018748 /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F7511416372A00018748 /* FavoriteViewController.m */; };
-		0176F7541416372A00018748 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F7521416372A00018748 /* FavoriteViewController.xib */; };
 		0176F77414163F7400018748 /* MainListNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F77214163F7400018748 /* MainListNaviController.m */; };
 		0176F77514163F7400018748 /* MainListNaviController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0176F77314163F7400018748 /* MainListNaviController.xib */; };
 		0176F77914163FC000018748 /* MainListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0176F77714163FC000018748 /* MainListTableController.m */; };
@@ -105,9 +103,6 @@
 		0176F73E141635F400018748 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0176F740141635F500018748 /* BelgianBeerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BelgianBeerTests.h; sourceTree = "<group>"; };
 		0176F742141635F500018748 /* BelgianBeerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BelgianBeerTests.m; sourceTree = "<group>"; };
-		0176F7501416372A00018748 /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
-		0176F7511416372A00018748 /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
-		0176F7521416372A00018748 /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		0176F77114163F7400018748 /* MainListNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainListNaviController.h; sourceTree = "<group>"; };
 		0176F77214163F7400018748 /* MainListNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainListNaviController.m; sourceTree = "<group>"; };
 		0176F77314163F7400018748 /* MainListNaviController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainListNaviController.xib; sourceTree = "<group>"; };
@@ -335,9 +330,6 @@
 		0176F79E1416586F00018748 /* FavoriteView */ = {
 			isa = PBXGroup;
 			children = (
-				0176F7501416372A00018748 /* FavoriteViewController.h */,
-				0176F7511416372A00018748 /* FavoriteViewController.m */,
-				0176F7521416372A00018748 /* FavoriteViewController.xib */,
 			);
 			name = FavoriteView;
 			sourceTree = "<group>";
@@ -411,7 +403,6 @@
 			files = (
 				0176F717141635F400018748 /* InfoPlist.strings in Resources */,
 				0176F720141635F400018748 /* MainWindow.xib in Resources */,
-				0176F7541416372A00018748 /* FavoriteViewController.xib in Resources */,
 				0176F77514163F7400018748 /* MainListNaviController.xib in Resources */,
 				0176F77A14163FC000018748 /* MainListTableController.xib in Resources */,
 				0176F7881416472E00018748 /* Beer.db in Resources */,
@@ -468,7 +459,6 @@
 			files = (
 				0176F719141635F400018748 /* main.m in Sources */,
 				0176F71D141635F400018748 /* BelgianBeerAppDelegate.m in Sources */,
-				0176F7531416372A00018748 /* FavoriteViewController.m in Sources */,
 				0176F77414163F7400018748 /* MainListNaviController.m in Sources */,
 				0176F77914163FC000018748 /* MainListTableController.m in Sources */,
 				0176F7921416491300018748 /* FMDatabase.m in Sources */,
