@@ -112,6 +112,7 @@
 						<int key="objectID">4</int>
 						<reference key="object" ref="873029372"/>
 						<reference key="parent" ref="0"/>
+						<string key="objectName">AleList</string>
 					</object>
 				</object>
 			</object>

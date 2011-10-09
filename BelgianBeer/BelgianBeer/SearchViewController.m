@@ -1,14 +1,14 @@
 //
-//  MainListNaviController.m
+//  SearchViewController.m
 //  BelgianBeer
 //
-//  Created by Amatsu on 11/09/06.
+//  Created by Amatsu on 11/10/10.
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "MainListNaviController.h"
+#import "SearchViewController.h"
 
-@implementation MainListNaviController
+@implementation SearchViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +33,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
 }
 
 - (void)viewDidUnload

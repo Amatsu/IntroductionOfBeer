@@ -1,15 +1,14 @@
 //
-//  HomeViewController.m
+//  TopNaviController.m
 //  BelgianBeer
 //
-//  Created by Amatsu on 11/10/09.
+//  Created by Amatsu on 11/10/10.
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "HomeViewController.h"
-#import "MainListTableController.h"
+#import "TopNaviController.h"
 
-@implementation HomeViewController
+@implementation TopNaviController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,30 +26,6 @@
     
     // Release any cached data, images, etc that aren't in use.
 }
-
-//AleListをClick
--(IBAction)showAleList:(id)sender{
-    
-    MainListTableController *tableViewController =
-    [[MainListTableController alloc] init];
-    [self.navigationController pushViewController:tableViewController animated:YES];
-    [tableViewController release];
-}
-
-//infoをClick
--(IBAction)showDeveInfo:(id)sender{
-    
-    UIAlertView *alertView = [[UIAlertView alloc]
-                              initWithTitle:@"SoftwereVersion"
-                              message:@"Ver1.0 開発：codeJoy" delegate:nil
-                              cancelButtonTitle:@"OK" 
-                              otherButtonTitles:nil
-                              ];
-    [alertView show];
-    [alertView release];
-}
-
-
 
 #pragma mark - View lifecycle
 

@@ -12,4 +12,7 @@
         
 }
 
+-(IBAction)showAleList:(id)sender;
+-(IBAction)showDeveInfo:(id)sender;
+
 @end
