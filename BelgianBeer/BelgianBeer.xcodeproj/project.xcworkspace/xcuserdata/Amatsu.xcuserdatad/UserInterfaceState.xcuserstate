@@ -16899,7 +16899,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339252068.13679999</real>
+		<real>339252099.87063199</real>
 		<string>{0, 497}</string>
 		<string>{355, 0}</string>
 		<dict>
@@ -21028,8 +21028,8 @@
 		</dict>
 		<string>IDEDeviceLocation</string>
 		<string>IDEDeviceArchitecture</string>
-		<string>dvtdevice-iphone:0310e79226881bbb686e868682cb252ff06d55ce</string>
-		<string>armv7</string>
+		<string>dvtdevice-iphonesimulator:/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk-iPhone</string>
+		<string>i386</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -28973,7 +28973,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339252068.13957298</real>
+		<real>339252099.87146801</real>
 		<string>{0, 497}</string>
 		<string>{355, 0}</string>
 		<string>@interface DetailTableViewController</string>
@@ -29009,7 +29009,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {754, 648}}</string>
+		<string>{{0, 0}, {754, 670}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
