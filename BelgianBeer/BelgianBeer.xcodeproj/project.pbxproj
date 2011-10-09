@@ -14,7 +14,6 @@
 		0103226C1438448600D970AE /* Cantillon_Lou_Pepe_Gueuze.png in Resources */ = {isa = PBXBuildFile; fileRef = 010322691438448600D970AE /* Cantillon_Lou_Pepe_Gueuze.png */; };
 		0103227B14388DD000D970AE /* DetailBeerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0103227A14388DD000D970AE /* DetailBeerCell.m */; };
 		0103227D14388DEE00D970AE /* DetailBeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0103227C14388DEE00D970AE /* DetailBeerCell.xib */; };
-		0103227F1441AC7600D970AE /* DB設計 in Resources */ = {isa = PBXBuildFile; fileRef = 0103227E1441AC7600D970AE /* DB設計 */; };
 		010322841441ADE900D970AE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010322821441ADE900D970AE /* HomeViewController.m */; };
 		010322851441ADE900D970AE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010322831441ADE900D970AE /* HomeViewController.xib */; };
 		0103228914420E1F00D970AE /* TopNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0103228714420E1D00D970AE /* TopNaviController.m */; };
@@ -77,7 +76,6 @@
 		0103227914388DCF00D970AE /* DetailBeerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailBeerCell.h; sourceTree = "<group>"; };
 		0103227A14388DD000D970AE /* DetailBeerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailBeerCell.m; sourceTree = "<group>"; };
 		0103227C14388DEE00D970AE /* DetailBeerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailBeerCell.xib; sourceTree = "<group>"; };
-		0103227E1441AC7600D970AE /* DB設計 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "DB設計"; sourceTree = "<group>"; };
 		010322811441ADE900D970AE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		010322821441ADE900D970AE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		010322831441ADE900D970AE /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 			children = (
 				01723763141B282200C4C690 /* images */,
 				0176F7871416472E00018748 /* Beer.db */,
-				0103227E1441AC7600D970AE /* DB設計 */,
 				0176F712141635F400018748 /* BelgianBeer */,
 				0176F73A141635F400018748 /* BelgianBeerTests */,
 				0176F70B141635F400018748 /* Frameworks */,
@@ -427,7 +424,6 @@
 				0103226B1438448600D970AE /* Cantillon_Grand_Cru_Broucse.png in Resources */,
 				0103226C1438448600D970AE /* Cantillon_Lou_Pepe_Gueuze.png in Resources */,
 				0103227D14388DEE00D970AE /* DetailBeerCell.xib in Resources */,
-				0103227F1441AC7600D970AE /* DB設計 in Resources */,
 				010322851441ADE900D970AE /* HomeViewController.xib in Resources */,
 				0103228A14420E1F00D970AE /* TopNaviController.xib in Resources */,
 				010322901442169E00D970AE /* SearchViewController.xib in Resources */,
