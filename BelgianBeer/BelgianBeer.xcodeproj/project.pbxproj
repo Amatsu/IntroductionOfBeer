@@ -27,6 +27,7 @@
 		011987451426F90C0063A482 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873E1426F90C0063A482 /* Icon-Small@2x.png */; };
 		011987461426F90C0063A482 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873F1426F90C0063A482 /* Icon.png */; };
 		011987471426F90C0063A482 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011987401426F90C0063A482 /* Icon@2x.png */; };
+		01260F77144A6D9800A5A560 /* Ale.m in Sources */ = {isa = PBXBuildFile; fileRef = 01260F76144A6D9800A5A560 /* Ale.m */; };
 		0176F70D141635F400018748 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F70C141635F400018748 /* UIKit.framework */; };
 		0176F70F141635F400018748 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F70E141635F400018748 /* Foundation.framework */; };
 		0176F711141635F400018748 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F710141635F400018748 /* CoreGraphics.framework */; };
@@ -54,6 +55,7 @@
 		01A26BD5141C475D00A4740D /* DetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A26BD3141C475D00A4740D /* DetailTableViewController.xib */; };
 		01B2B1B21428D1B700263745 /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B2B1B11428D1B700263745 /* ShareCell.m */; };
 		01B2B1B41428D31D00263745 /* ShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B2B1B31428D31D00263745 /* ShareCell.xib */; };
+		01E988A5144A77140099CA86 /* AleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E988A4144A77140099CA86 /* AleStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		0119873E1426F90C0063A482 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		0119873F1426F90C0063A482 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		011987401426F90C0063A482 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		01260F75144A6D9800A5A560 /* Ale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ale.h; sourceTree = "<group>"; };
+		01260F76144A6D9800A5A560 /* Ale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ale.m; sourceTree = "<group>"; };
 		0176F708141635F400018748 /* BelgianBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BelgianBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0176F70C141635F400018748 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0176F70E141635F400018748 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +134,8 @@
 		01B2B1B01428D1B700263745 /* ShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCell.h; sourceTree = "<group>"; };
 		01B2B1B11428D1B700263745 /* ShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCell.m; sourceTree = "<group>"; };
 		01B2B1B31428D31D00263745 /* ShareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareCell.xib; sourceTree = "<group>"; };
+		01E988A3144A77140099CA86 /* AleStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AleStyle.h; sourceTree = "<group>"; };
+		01E988A4144A77140099CA86 /* AleStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AleStyle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +328,10 @@
 				0176F7A414178C7700018748 /* Beer.m */,
 				0176F799141654B200018748 /* BeerCategory.h */,
 				0176F79A141654B200018748 /* BeerCategory.m */,
+				01260F75144A6D9800A5A560 /* Ale.h */,
+				01260F76144A6D9800A5A560 /* Ale.m */,
+				01E988A3144A77140099CA86 /* AleStyle.h */,
+				01E988A4144A77140099CA86 /* AleStyle.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -477,6 +487,8 @@
 				010322841441ADE900D970AE /* HomeViewController.m in Sources */,
 				0103228914420E1F00D970AE /* TopNaviController.m in Sources */,
 				0103228F1442169E00D970AE /* SearchViewController.m in Sources */,
+				01260F77144A6D9800A5A560 /* Ale.m in Sources */,
+				01E988A5144A77140099CA86 /* AleStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
