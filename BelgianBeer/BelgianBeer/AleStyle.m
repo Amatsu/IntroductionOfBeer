@@ -11,12 +11,12 @@
 @implementation AleStyle
 
 //プロパティと対応付け
-@synthesize AleStyleNo;
-@synthesize AleStyleID;
-@synthesize AleStyleName;
-@synthesize AleStyleKanaName;
-@synthesize AleStyleExplanation;
-@synthesize AleList;
+@synthesize _aleStyleNo;
+@synthesize _aleStyleID;
+@synthesize _aleStyleName;
+@synthesize _aleStyleKanaName;
+@synthesize _aleStyleExplanation;
+@synthesize _aleList;
 
 - (id)init
 {

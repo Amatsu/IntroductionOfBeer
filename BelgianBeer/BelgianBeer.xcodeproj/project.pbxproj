@@ -187,12 +187,20 @@
 			name = SearchView;
 			sourceTree = "<group>";
 		};
-		01723763141B282200C4C690 /* images */ = {
+		0127B9B81452AE920015EDDE /* Ale */ = {
 			isa = PBXGroup;
 			children = (
 				010322671438448600D970AE /* Boon_Oude_Gueuze.png */,
 				010322681438448600D970AE /* Cantillon_Grand_Cru_Broucse.png */,
 				010322691438448600D970AE /* Cantillon_Lou_Pepe_Gueuze.png */,
+			);
+			name = Ale;
+			sourceTree = "<group>";
+		};
+		01723763141B282200C4C690 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0127B9B81452AE920015EDDE /* Ale */,
 				0119873A1426F90C0063A482 /* Default.png */,
 				0119873B1426F90C0063A482 /* Icon-72.png */,
 				0119873C1426F90C0063A482 /* Icon-Small-50.png */,

@@ -10,28 +10,30 @@
 
 //Aleの情報を保持
 @interface Ale : NSObject{
-    int       AleNo;
-    NSString *AleID;
-    NSString *AleName;
-    NSString *AleKanaName;
-    NSString *AleExplanation;
-    UIImage  *AleImage;
-    NSMutableArray *AleStyleList;  //該当するStyleのリスト　Aleに対して複数のStyleが適用される
-    int       Rank;             //0~5までのランク
-    int       DrinkState;       //1:次回飲む予定
-    NSString *ReviewText;       //感想（未使用）
+    int       _aleNo;
+    NSString* _aleID;
+    NSString* _aleName;
+    NSString* _aleKanaName;
+    NSString* _aleExplanation;
+    UIImage*  _aleMiniImage;
+    UIImage*  _aleImage;
+    NSMutableArray* _aleStyleList;  //該当するStyleのリスト　Aleに対して複数のStyleが適用される
+    int       _rank;             //0~5までのランク
+    int       _drinkState;       //1:次回飲む予定
+    NSString* _reviewText;       //感想（未使用）
 }
 
 //技術ノート：(assign)は単純代入を使用するという意味
-@property (assign)int       AleNo;
-@property (assign)NSString *AleID;
-@property (assign)NSString *AleName;
-@property (assign)NSString *AleKanaName;
-@property (assign)NSString *AleExplanation;
-@property (assign)UIImage  *AleImage;
-@property (assign)NSMutableArray *AleStyleList;
-@property (assign)int       Rank;
-@property (assign)int       DrinkState;
-@property (assign)NSString *ReviewText;
+@property (assign)int       _aleNo;
+@property (assign)NSString* _aleID;
+@property (assign)NSString* _aleName;
+@property (assign)NSString* _aleKanaName;
+@property (assign)NSString* _aleExplanation;
+@property (assign)UIImage*  _aleMiniImage;
+@property (assign)UIImage*  _aleImage;
+@property (assign)NSMutableArray * _aleStyleList;
+@property (assign)int       _rank;
+@property (assign)int       _drinkState;
+@property (assign)NSString* _reviewText;
 
 @end
