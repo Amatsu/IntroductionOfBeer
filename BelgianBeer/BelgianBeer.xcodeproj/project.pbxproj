@@ -197,6 +197,15 @@
 			name = Ale;
 			sourceTree = "<group>";
 		};
+		0127B9B91452D7190015EDDE /* DbController */ = {
+			isa = PBXGroup;
+			children = (
+				01E988AA144A7AE60099CA86 /* AleInfoDbAccessController.h */,
+				01E988AB144A7AE60099CA86 /* AleInfoDbAccessController.m */,
+			);
+			name = DbController;
+			sourceTree = "<group>";
+		};
 		01723763141B282200C4C690 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +257,7 @@
 		0176F712141635F400018748 /* BelgianBeer */ = {
 			isa = PBXGroup;
 			children = (
+				0127B9B91452D7190015EDDE /* DbController */,
 				0176F79D1416584B00018748 /* View */,
 				0176F79C1416583500018748 /* Entity */,
 				0176F71B141635F400018748 /* BelgianBeerAppDelegate.h */,
@@ -343,8 +353,6 @@
 				01260F76144A6D9800A5A560 /* Ale.m */,
 				01E988A3144A77140099CA86 /* AleStyle.h */,
 				01E988A4144A77140099CA86 /* AleStyle.m */,
-				01E988AA144A7AE60099CA86 /* AleInfoDbAccessController.h */,
-				01E988AB144A7AE60099CA86 /* AleInfoDbAccessController.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
