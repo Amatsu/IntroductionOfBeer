@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "BeerCell.h"
+#import "AleInfoDbAccessController.h"
 
 @interface MainListTableController : UITableViewController{
-    NSMutableArray *categoryList;
+    NSMutableArray *styleList;
+    AleInfoDbAccessController *aleInfoDbCtrl;
+    
     BeerCell *beerCell;			//	提案用セル
 }
 
-@property (readonly) NSMutableArray *categoryList;
-@property (nonatomic, assign) IBOutlet BeerCell* beerCell;
+@property (assign) NSMutableArray *styleList;
+@property (assign) AleInfoDbAccessController *aleInfoDbCtrl;
+
+@property (nonatomic, assign) IBOutlet BeerCell *beerCell;
 
 @end

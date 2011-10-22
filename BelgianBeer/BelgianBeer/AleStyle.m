@@ -11,18 +11,19 @@
 @implementation AleStyle
 
 //プロパティと対応付け
-@synthesize _aleStyleNo;
-@synthesize _aleStyleID;
-@synthesize _aleStyleName;
-@synthesize _aleStyleKanaName;
-@synthesize _aleStyleExplanation;
-@synthesize _aleList;
+@synthesize aleStyleNo;
+@synthesize aleStyleID;
+@synthesize aleStyleName;
+@synthesize aleStyleKanaName;
+@synthesize aleStyleExplanation;
+@synthesize aleList;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         // Initialization code here.
+        return [self initParameter:-1 styleId:@"" styleName:@"" styleKanaName:@"" styleExplanation:@""];
     }
     
     return self;
@@ -34,15 +35,16 @@
           styleName:(NSString *) name
       styleKanaName:(NSString *) kanaName
    styleExplanation:(NSString *) exp
-            aleList:(NSMutableArray *) aleList
 {
  
-    self._aleStyleNo = sytleNo;
-    self._aleStyleID = styleId;
-    self._aleStyleName = name;
-    self._aleStyleKanaName = kanaName;
-    self._aleStyleExplanation = exp;
-    self._aleList = aleList;
+    aleStyleNo = sytleNo;
+    aleStyleID = styleId;
+    aleStyleName = name;
+    aleStyleKanaName = kanaName;
+    aleStyleExplanation = exp;
+    
+    //AleListは初期化
+    aleList = [[NSMutableArray alloc]init];
     
     //設定後に自身を返す
     return self;

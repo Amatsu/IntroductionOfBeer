@@ -8,20 +8,17 @@
 
 #import "MainListTableController.h"
 #import "DetailTableViewController.h"
-#import "FMDatabase.h"
-#import "FMDatabaseAdditions.h"
-#import "BeerCategory.h"
-#import "Beer.h"
+#import "Ale.h"
+#import "AleStyle.h"
 
 @implementation MainListTableController
 
+@synthesize styleList;
+@synthesize aleInfoDbCtrl;
 @synthesize beerCell;
 
 #define SECTION_HEIGHT 30   //セクションの高さ
 #define ROW_HEIGHT 110       //行の高さ
-
-//カテゴリ一覧
-@synthesize categoryList;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -53,105 +50,9 @@
 //    self.navigationItem.rightBarButtonItem = barButton;
 //    [barButton release];
     
-    //--------------------------------------------------------------------
-    //DBに接続し必要情報を取得
-    //--------------------------------------------------------------------
     
-    // ファイルがなければプロジェクトフォルダからiPhone Documentフォルダにコピー
-    BOOL success;
-    NSError *error;	
-    NSFileManager *fm = [NSFileManager defaultManager];
-    NSArray  *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"Beer.db"];
-    success = [fm fileExistsAtPath:writableDBPath];
-    if(!success){
-        NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Beer.db"];
-        success = [fm copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
-        if(!success){
-            //Error
-            //NSLog([error localizedDescription]);
-        }
-    }
-    
-    //DBのパスをログ出力
-    //NSLog(writableDBPath);
-    
-    // DBに接続
-    FMDatabase* db = [FMDatabase databaseWithPath:writableDBPath];
-    if ([db open]) {
-        [db setShouldCacheStatements:YES];
-        
-        NSMutableString *sql = [NSMutableString string];
-        [sql appendString:@" SELECT "];
-        [sql appendString:@"        cate.category_id"];
-        [sql appendString:@"      , cate.name as category_name"];
-        [sql appendString:@"      , cate.explanation as category_explanation"];
-        [sql appendString:@"      , com.commodity_id"];
-        [sql appendString:@"      , com.name as commodity_name"];
-        [sql appendString:@"      , com.kana_name as commodity_kana_name"];
-        [sql appendString:@"      , com.explanation as commodity_explanation"];
-        [sql appendString:@"      , com.Image as commodity_image"];
-        [sql appendString:@"  FROM Commodity com INNER JOIN Category cate"];
-        [sql appendString:@"                     ON com.category_ID = cate.Category_ID"];
-        [sql appendString:@" Order By"];
-        [sql appendString:@"       cate.category_id ASC,com.commodity_id ASC"];
-        
-        //カテゴリ一覧を生成
-        categoryList = [[NSMutableArray alloc]init];
-        
-        //sqｌの中身の確認
-        //NSLog(@"%@",sql);
-        
-        // SELECT
-        FMResultSet *rs = [db executeQuery:sql];
-        
-        int beforeCategoryId = -1;
-        BeerCategory *category;
-        Beer *beer;
-        while ([rs next]) {
-            
-            if (beforeCategoryId != [rs intForColumn:@"Category_id"]) {
-                
-                beforeCategoryId = [rs intForColumn:@"Category_id"];
-                
-                //カテゴリを生成
-                category = [[BeerCategory alloc] init];
-                [category initParameter:[rs intForColumn:@"Category_id"] 
-                                   name:[[rs stringForColumn:@"category_name"] retain]
-                                    exp:[[rs stringForColumn:@"category_explanation"] retain]];
-                
-                //生成したカテゴリを追加
-                [categoryList addObject:category];
-            }
-            
-            //ビールを生成
-            beer = [[Beer alloc]init];
-            [beer initParameter:[rs intForColumn:@"Commodity_id"]
-                           name:[[rs stringForColumn:@"commodity_name"] retain]
-                       kanaName:[[rs stringForColumn:@"commodity_kana_name"] retain]
-                            exp:[[rs stringForColumn:@"commodity_explanation"] retain]
-                            img:[[rs stringForColumn:@"commodity_image"] retain]];
-
-            
-            //カテゴリにビールを追加
-            [category.beerList addObject:beer];
-            
-        }
-        
-        [rs close];  
-        [db close];
-    }else{
-        NSLog(@"Could not open db.");
-    }
-    
-//    NSLog(@"%d",[[categoryList objectAtIndex:0] categoryID]);
-//    NSLog(@"%@",[[categoryList objectAtIndex:0] categoryName]);
-//    NSLog(@"%@",[[categoryList objectAtIndex:0] categroyExplanation]);
-//    
-//    NSLog(@"%@",[[[[categoryList objectAtIndex:0] beerList] objectAtIndex:0] beerName]);
-//    NSLog(@"%@",[[[[categoryList objectAtIndex:0] beerList] objectAtIndex:0] beerExplanation]);    
-
+    //Style順のリストを取得
+    styleList = [aleInfoDbCtrl getAleList_SortByStyle];
     
  }
 
@@ -194,14 +95,14 @@
 {
     // Return the number of sections.
     //セクションの数はカテゴリの数
-    return [categoryList count];
+    return [styleList count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    //該当セクションの行数はビールの数
-    return [[[categoryList objectAtIndex:section] beerList] count];
+    //該当セクションの行数はAleの数
+    return [[[styleList objectAtIndex:section] aleList] count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -217,9 +118,7 @@
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     //セクション名
-    //NSLog(@"%d", [categoryList count]);
-    //NSLog(@"CategoryID:::%d",[[categoryList objectAtIndex:0] categoryID]);
-    return [NSString stringWithFormat:@"%@",[[categoryList objectAtIndex:section] categoryName]];
+    return [NSString stringWithFormat:@"%@",[[styleList objectAtIndex:section] aleStyleName]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
@@ -233,15 +132,15 @@
         [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
         
         //名称を設定
-        [beerCell setBeerName:[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerName]];
+        [beerCell setBeerName:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] aleName]];
         
         //カナ名称を設定
-        [beerCell setBeerKanaName:[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerKanaName]];
+        [beerCell setBeerKanaName:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] aleKanaName]];
         
         //Style名称を設定
         
         //画像を設定
-        [beerCell setBeerImage:[[[[categoryList objectAtIndex:indexPath.section] beerList] objectAtIndex:indexPath.row] beerImage]];
+        [beerCell setBeerImage:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] aleMiniImage]];
         
         cell = beerCell;
         self.beerCell = nil;

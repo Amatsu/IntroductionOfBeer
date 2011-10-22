@@ -9,6 +9,8 @@
 #import "AleInfoDbAccessController.h"
 #import "FMDatabase.h"
 #import "FMDatabaseAdditions.h"
+#import "Ale.h"
+#import "AleStyle.h"
 
 @implementation AleInfoDbAccessController
 
@@ -29,7 +31,7 @@
         NSFileManager *fm = [NSFileManager defaultManager];
         NSArray  *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
-        self._writeDbPath = [documentsDirectory stringByAppendingPathComponent:@"Beer.db"];
+        self._writeDbPath = [[documentsDirectory stringByAppendingPathComponent:@"Beer.db"]retain] ;
         success = [fm fileExistsAtPath:self._writeDbPath];
         if(!success){
             NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Beer.db"];
@@ -53,7 +55,9 @@
 -(NSMutableArray *) getAleList_SortByStyle{
     
     //戻り値のリストを生成
-    NSMutableArray * tmpAleList = [[NSMutableArray alloc]init];
+    NSMutableArray *wkStyleList = [[NSMutableArray alloc]init];
+    NSLog(@"%d",wkStyleList.count);
+    
     
     FMDatabase* db = [FMDatabase databaseWithPath:self._writeDbPath];
     
@@ -62,67 +66,86 @@
         
         NSMutableString *sql = [NSMutableString string];
         [sql appendString:@" SELECT "];
-        [sql appendString:@"        cate.category_id"];
-        [sql appendString:@"      , cate.name as category_name"];
-        [sql appendString:@"      , cate.explanation as category_explanation"];
-        [sql appendString:@"      , com.commodity_id"];
-        [sql appendString:@"      , com.name as commodity_name"];
-        [sql appendString:@"      , com.kana_name as commodity_kana_name"];
-        [sql appendString:@"      , com.explanation as commodity_explanation"];
-        [sql appendString:@"      , com.Image as commodity_image"];
-        [sql appendString:@"  FROM Commodity com INNER JOIN Category cate"];
-        [sql appendString:@"                     ON com.category_ID = cate.Category_ID"];
-        [sql appendString:@" Order By"];
-        [sql appendString:@"       cate.category_id ASC,com.commodity_id ASC"];
-        
-        //カテゴリ一覧を生成
-        //categoryList = [[NSMutableArray alloc]init];
+        [sql appendString:@"       STYLE.STYLE_NO "];
+        [sql appendString:@"     , STYLE.STYLE_ID "];
+        [sql appendString:@"     , STYLE.STYLE_NAME "];
+        [sql appendString:@"     , STYLE.STYLE_KANA_NAME "];
+        [sql appendString:@"     , STYLE.STYLE_EXPLANATION "];
+        [sql appendString:@"     , ALE.ALE_NO "];
+        [sql appendString:@"     , ALE.ALE_ID "];
+        [sql appendString:@"     , ALE.ALE_NAME "];
+        [sql appendString:@"     , ALE.ALE_KANA_NAME "];
+        [sql appendString:@"     , ALE.ALE_EXPLANATION "];
+        [sql appendString:@"     , ALE.ALE_MINI_IMAGE_FILENAME "];
+        [sql appendString:@"     , ALE.ALE_IMAGE_FILENAME "];
+        [sql appendString:@"     , REVIEW.RANK "];
+        [sql appendString:@"     , REVIEW.NEXT_DRINK_STATE "];
+        [sql appendString:@"     , REVIEW.REVIEW_TEXT "];
+        [sql appendString:@" FROM STYLE INNER JOIN ALE_STYLE "];
+        [sql appendString:@"                    ON STYLE.STYLE_NO = ALE_STYLE.STYLE_NO "];
+        [sql appendString:@"		    INNER JOIN ALE "];
+        [sql appendString:@"				    ON ALE_STYLE.ALE_NO = ALE.ALE_NO "];
+        [sql appendString:@"			 LEFT JOIN REVIEW "];
+        [sql appendString:@"			   				ON ALE.ALE_NO = REVIEW.ALE_NO "];
+        [sql appendString:@" ORDER BY STYLE.STYLE_NO ASC "];
+        [sql appendString:@"			  , STYLE.STYLE_NAME ASC "];
+        [sql appendString:@" 			  , ALE.ALE_NAME ASC "];
         
         //sqｌの中身の確認
         //NSLog(@"%@",sql);
         
-        // SELECT
+        //SQLを発行
         FMResultSet *rs = [db executeQuery:sql];
         
-//        int beforeCategoryId = -1;
-//        BeerCategory *category;
-//        Beer *beer;
-//        while ([rs next]) {
-//            
-//            if (beforeCategoryId != [rs intForColumn:@"Category_id"]) {
-//                
-//                beforeCategoryId = [rs intForColumn:@"Category_id"];
-//                
-//                //カテゴリを生成
-//                category = [[BeerCategory alloc] init];
-//                [category initParameter:[rs intForColumn:@"Category_id"] 
-//                                   name:[[rs stringForColumn:@"category_name"] retain]
-//                                    exp:[[rs stringForColumn:@"category_explanation"] retain]];
-//                
-//                //生成したカテゴリを追加
-//                [categoryList addObject:category];
-//            }
-//            
-//            //ビールを生成
-//            beer = [[Beer alloc]init];
-//            [beer initParameter:[rs intForColumn:@"Commodity_id"]
-//                           name:[[rs stringForColumn:@"commodity_name"] retain]
-//                       kanaName:[[rs stringForColumn:@"commodity_kana_name"] retain]
-//                            exp:[[rs stringForColumn:@"commodity_explanation"] retain]
-//                            img:[[rs stringForColumn:@"commodity_image"] retain]];
-//            
-//            
-//            //カテゴリにビールを追加
-//            [category.beerList addObject:beer];
-//            
-//        }
+        //戻り値のリストを生成
+        int beforeStyleNo = -1;
+        AleStyle *wkStylel;
+        Ale *wkAle;
+        
+        //レコード分ループ
+        while ([rs next]) {
+            
+            if (beforeStyleNo != [rs intForColumn:@"STYLE_NO"]) {
+                
+                //StyleNoを保存
+                beforeStyleNo = [rs intForColumn:@"STYLE_NO"];
+                
+                //Styleを生成
+                wkStylel = [[[AleStyle alloc] init] retain];
+                [wkStylel initParameter:[rs intForColumn:@"STYLE_NO"]
+                                 styleId:[[rs stringForColumn:@"STYLE_ID"] retain]
+                               styleName:[[rs stringForColumn:@"STYLE_NAME"] retain]
+                           styleKanaName:[[rs stringForColumn:@"STYLE_KANA_NAME"] retain]
+                        styleExplanation:[[rs stringForColumn:@"STYLE_EXPLANATION"] retain]];
+                
+                //生成したStyleを追加
+                [wkStyleList addObject:wkStylel];
+                
+            }
+            
+            //Aleを生成
+            wkAle = [[[Ale alloc]init] retain];
+            [wkAle initParameter:[rs intForColumn:@"ALE_NO"]
+                           aleId:[[rs stringForColumn:@"ALE_ID"] retain]
+                         aleName:[[rs stringForColumn:@"ALE_NAME"] retain]
+                     aleKanaName:[[rs stringForColumn:@"ALE_KANA_NAME"] retain]
+                     explanation:[[rs stringForColumn:@"ALE_EXPLANATION"] retain]
+               miniImageFileName:[[rs stringForColumn:@"ALE_MINI_IMAGE_FILENAME"] retain]
+                   imageFileName:[[rs stringForColumn:@"ALE_IMAGE_FILENAME"] retain]
+                            rank:[rs intForColumn:@"RANK"]
+                      drinkState:[rs intForColumn:@"NEXT_DRINK_STATE"]
+                          review:[[rs stringForColumn:@"REVIEW_TEXT"] retain]];
+            
+            //StyleにAleを追加
+            [wkStylel.aleList addObject:wkAle];
+        }
         
         [rs close];  
         [db close];
     }
-    
+
     //AleListを変換
-    return tmpAleList;
+    return wkStyleList;
 }
 
 @end

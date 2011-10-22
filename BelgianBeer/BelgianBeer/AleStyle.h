@@ -9,20 +9,26 @@
 #import <Foundation/Foundation.h>
 
 @interface AleStyle : NSObject{
-    int       _aleSytleNo;
-    NSString* _aleSytleID;
-    NSString* _aleSytleName;
-    NSString* _aleSytleKanaName;
-    NSString* _aleSytleExplanation;
-    NSMutableArray *AleList;
+    int       aleSytleNo;
+    NSString *aleSytleID;
+    NSString *aleSytleName;
+    NSString *aleSytleKanaName;
+    NSString *aleSytleExplanation;
+    NSMutableArray *aleList;
 }
 
-@property (assign)int _aleStyleNo;
-@property (assign)NSString* _aleStyleID;
-@property (assign)NSString* _aleStyleName;
-@property (assign)NSString* _aleStyleKanaName;
-@property (assign)NSString* _aleStyleExplanation;
-@property (assign)NSMutableArray* _aleList;
+@property (assign)int aleStyleNo;
+@property (assign)NSString *aleStyleID;
+@property (assign)NSString *aleStyleName;
+@property (assign)NSString *aleStyleKanaName;
+@property (assign)NSString *aleStyleExplanation;
+@property (assign)NSMutableArray* aleList;
 
+//初期化用メソッド
+- (id)initParameter:(int) sytleNo
+            styleId:(NSString *) styleId
+          styleName:(NSString *) name
+      styleKanaName:(NSString *) kanaName
+   styleExplanation:(NSString *) exp;
 
 @end

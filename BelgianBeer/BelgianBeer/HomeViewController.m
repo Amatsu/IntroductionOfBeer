@@ -11,11 +11,14 @@
 
 @implementation HomeViewController
 
+@synthesize aleInfoDbCtrl;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+       
     }
     return self;
 }
@@ -31,10 +34,19 @@
 //AleListをClick
 -(IBAction)showAleList:(id)sender{
     
-    MainListTableController *tableViewController =
-    [[MainListTableController alloc] init];
+    MainListTableController *tableViewController = [[MainListTableController alloc] init];
+    tableViewController.aleInfoDbCtrl  = aleInfoDbCtrl;
     [self.navigationController pushViewController:tableViewController animated:YES];
     [tableViewController release];
+}
+
+-(IBAction)showAlelistStyleSort:(id)sender{
+    
+    MainListTableController *tableViewController = [[MainListTableController alloc] init];
+    tableViewController.aleInfoDbCtrl  = aleInfoDbCtrl;
+    [self.navigationController pushViewController:tableViewController animated:YES];
+    [tableViewController release];
+
 }
 
 //infoをClick
@@ -58,6 +70,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //ロード時にDBコントローラを生成
+    if (aleInfoDbCtrl == nil){
+        aleInfoDbCtrl = [[[AleInfoDbAccessController alloc]init]retain];
+    }
+    
 }
 
 - (void)viewDidUnload

@@ -11,17 +11,17 @@
 @implementation Ale
 
 //プロパティと対応付け
-@synthesize _aleNo;
-@synthesize _aleID;
-@synthesize _aleName;
-@synthesize _aleKanaName;
-@synthesize _aleExplanation;
-@synthesize _aleMiniImage;
-@synthesize _aleImage;
-@synthesize _aleStyleList;
-@synthesize _rank;
-@synthesize _drinkState;
-@synthesize _reviewText;
+@synthesize aleNo;
+@synthesize aleID;
+@synthesize aleName;
+@synthesize aleKanaName;
+@synthesize aleExplanation;
+@synthesize aleMiniImage;
+@synthesize aleImage;
+@synthesize aleStyleList;
+@synthesize rank;
+@synthesize drinkState;
+@synthesize reviewText;
 
 - (id)init
 {
@@ -41,23 +41,24 @@
          explanation:(NSString *) exp
   miniImageFileName:(NSString *) miniImageFileName
       imageFileName:(NSString *) ImageFileName
-          styleList:(NSMutableArray *) styleList
-               rank:(int) rank
-         drinkState:(int) drinkState
+               rank:(int) rankVal
+         drinkState:(int) state
              review:(NSString *) review
 {
     
-    self._aleNo = aleNo;
-    self._aleID = aleId;
-    self._aleName = name;
-    self._aleKanaName = kanaName;
-    self._aleExplanation = exp;
-    self._aleMiniImage = [UIImage imageNamed:miniImageFileName];
-    self._aleImage = [UIImage imageNamed:ImageFileName];
-    self._aleStyleList = styleList;
-    self._rank = rank;
-    self._drinkState = drinkState;
-    self._reviewText = review;
+    aleNo = aleNo;
+    aleID = aleId;
+    aleName = name;
+    aleKanaName = kanaName;
+    aleExplanation = exp;
+    aleMiniImage = [UIImage imageNamed:miniImageFileName];
+    aleImage = [UIImage imageNamed:ImageFileName];
+    rank = rankVal;
+    drinkState = state;
+    reviewText = review;
+    
+    //StyleListは初期化する
+    aleStyleList = [[NSMutableArray alloc]init];
     
     //プロパティ設定後自身を返す
     return self;

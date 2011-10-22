@@ -10,30 +10,42 @@
 
 //Aleの情報を保持
 @interface Ale : NSObject{
-    int       _aleNo;
-    NSString* _aleID;
-    NSString* _aleName;
-    NSString* _aleKanaName;
-    NSString* _aleExplanation;
-    UIImage*  _aleMiniImage;
-    UIImage*  _aleImage;
-    NSMutableArray* _aleStyleList;  //該当するStyleのリスト　Aleに対して複数のStyleが適用される
-    int       _rank;             //0~5までのランク
-    int       _drinkState;       //1:次回飲む予定
-    NSString* _reviewText;       //感想（未使用）
+    int       aleNo;
+    NSString *aleID;
+    NSString *aleName;
+    NSString *aleKanaName;
+    NSString *aleExplanation;
+    UIImage  *aleMiniImage;
+    UIImage  *aleImage;
+    NSMutableArray *aleStyleList;  //該当するStyleのリスト　Aleに対して複数のStyleが適用される
+    int       rank;             //0~5までのランク
+    int       drinkState;       //1:次回飲む予定
+    NSString *reviewText;       //感想（未使用）
 }
 
 //技術ノート：(assign)は単純代入を使用するという意味
-@property (assign)int       _aleNo;
-@property (assign)NSString* _aleID;
-@property (assign)NSString* _aleName;
-@property (assign)NSString* _aleKanaName;
-@property (assign)NSString* _aleExplanation;
-@property (assign)UIImage*  _aleMiniImage;
-@property (assign)UIImage*  _aleImage;
-@property (assign)NSMutableArray * _aleStyleList;
-@property (assign)int       _rank;
-@property (assign)int       _drinkState;
-@property (assign)NSString* _reviewText;
+@property (assign)int       aleNo;
+@property (assign)NSString *aleID;
+@property (assign)NSString *aleName;
+@property (assign)NSString *aleKanaName;
+@property (assign)NSString *aleExplanation;
+@property (assign)UIImage  *aleMiniImage;
+@property (assign)UIImage  *aleImage;
+@property (assign)NSMutableArray *aleStyleList;
+@property (assign)int       rank;
+@property (assign)int       drinkState;
+@property (assign)NSString *reviewText;
 
+
+//初期化用メソッド
+- (id)initParameter:(int)aleNo
+              aleId:(NSString *) aleId
+            aleName:(NSString *) name
+        aleKanaName:(NSString *) kanaName
+        explanation:(NSString *) exp
+  miniImageFileName:(NSString *) miniImageFileName
+      imageFileName:(NSString *) ImageFileName
+               rank:(int) rank
+         drinkState:(int) drinkState
+             review:(NSString *) review;
 @end

@@ -7,12 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AleInfoDbAccessController.h"
 
 @interface HomeViewController : UIViewController{
-        
+    AleInfoDbAccessController *aleInfoDbCtrl;        
 }
 
--(IBAction)showAleList:(id)sender;
+@property (assign) AleInfoDbAccessController *aleInfoDbCtrl;
+
 -(IBAction)showDeveInfo:(id)sender;
+
+//StyleSort
+-(IBAction)showAlelistStyleSort:(id)sender;
+
+
+//AtoZSort
+-(IBAction)showAleList:(id)sender;
 
 @end
