@@ -37,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "BelgianBeer/AleInfoDbAccessController.m"
-         timestampString = "340982985.911414"
+         timestampString = "340991094.452477"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "152"
-         endingLineNumber = "152"
+         startingLineNumber = "259"
+         endingLineNumber = "259"
          landmarkName = "-getAleList_SortByStyle"
          landmarkType = "5">
       </FileBreakpoint>
@@ -57,34 +57,6 @@
          startingLineNumber = "50"
          endingLineNumber = "50"
          landmarkName = "-initParameter:styleId:styleName:styleKanaName:styleExplanation:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "BelgianBeer/AleInfoDbAccessController.m"
-         timestampString = "340982985.911414"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "124"
-         endingLineNumber = "124"
-         landmarkName = "-getAleList_SortByStyle"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "BelgianBeer/AleInfoDbAccessController.m"
-         timestampString = "340982985.911414"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "123"
-         endingLineNumber = "123"
-         landmarkName = "-getAleList_SortByStyle"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -141,6 +113,34 @@
          startingLineNumber = "45"
          endingLineNumber = "45"
          landmarkName = "-showAlelistStyleSort:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BelgianBeer/AleInfoDbAccessController.m"
+         timestampString = "340991085.151191"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "230"
+         endingLineNumber = "230"
+         landmarkName = "-getAleList_SortByStyle"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BelgianBeer/AleInfoDbAccessController.m"
+         timestampString = "340991088.643002"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "241"
+         endingLineNumber = "241"
+         landmarkName = "-getAleList_SortByStyle"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
