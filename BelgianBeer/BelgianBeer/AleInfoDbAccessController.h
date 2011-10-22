@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 
 //DBから情報を取得する
-@interface AleInfoDbAccessController : NSObject
+@interface AleInfoDbAccessController : NSObject{
+    NSString * _writeDbPath;
+}
+
+@property (assign) NSString * _writeDbPath;
 
 //A-Z順でAle一覧を返すメソッド
 -(NSMutableArray *) getAleList_SortByAtoZ;
