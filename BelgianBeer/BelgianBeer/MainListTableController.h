@@ -18,7 +18,4 @@
 @property (readonly) NSMutableArray *categoryList;
 @property (nonatomic, assign) IBOutlet BeerCell* beerCell;
 
-//- (UITableViewCell *)tableViewCellWithReuseIdentifier:(NSString *)identifier;
-//- (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath;
-
 @end

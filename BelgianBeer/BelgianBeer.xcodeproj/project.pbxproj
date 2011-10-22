@@ -56,6 +56,7 @@
 		01B2B1B21428D1B700263745 /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B2B1B11428D1B700263745 /* ShareCell.m */; };
 		01B2B1B41428D31D00263745 /* ShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B2B1B31428D31D00263745 /* ShareCell.xib */; };
 		01E988A5144A77140099CA86 /* AleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E988A4144A77140099CA86 /* AleStyle.m */; };
+		01E988AC144A7AE60099CA86 /* AleInfoDbAccessController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E988AB144A7AE60099CA86 /* AleInfoDbAccessController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,8 @@
 		01B2B1B31428D31D00263745 /* ShareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareCell.xib; sourceTree = "<group>"; };
 		01E988A3144A77140099CA86 /* AleStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AleStyle.h; sourceTree = "<group>"; };
 		01E988A4144A77140099CA86 /* AleStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AleStyle.m; sourceTree = "<group>"; };
+		01E988AA144A7AE60099CA86 /* AleInfoDbAccessController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AleInfoDbAccessController.h; sourceTree = "<group>"; };
+		01E988AB144A7AE60099CA86 /* AleInfoDbAccessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AleInfoDbAccessController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +335,8 @@
 				01260F76144A6D9800A5A560 /* Ale.m */,
 				01E988A3144A77140099CA86 /* AleStyle.h */,
 				01E988A4144A77140099CA86 /* AleStyle.m */,
+				01E988AA144A7AE60099CA86 /* AleInfoDbAccessController.h */,
+				01E988AB144A7AE60099CA86 /* AleInfoDbAccessController.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -489,6 +494,7 @@
 				0103228F1442169E00D970AE /* SearchViewController.m in Sources */,
 				01260F77144A6D9800A5A560 /* Ale.m in Sources */,
 				01E988A5144A77140099CA86 /* AleStyle.m in Sources */,
+				01E988AC144A7AE60099CA86 /* AleInfoDbAccessController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  Ale.h
 //  BelgianBeer
 //
-//  Created by 秀典 細野 on 11/10/16.
+//  Created by Amatsu on 11/10/16.
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
     NSString *AleKanaName;
     NSString *AleExplanation;
     UIImage  *AleImage;
-    NSMutableArray *StyleList;  //該当するStyleのリスト　Aleに対して複数のStyleが適用される
+    NSMutableArray *AleStyleList;  //該当するStyleのリスト　Aleに対して複数のStyleが適用される
     int       Rank;             //0~5までのランク
     int       DrinkState;       //1:次回飲む予定
     NSString *ReviewText;       //感想（未使用）
@@ -29,7 +29,7 @@
 @property (assign)NSString *AleKanaName;
 @property (assign)NSString *AleExplanation;
 @property (assign)UIImage  *AleImage;
-@property (assign)NSMutableArray *StyleList;
+@property (assign)NSMutableArray *AleStyleList;
 @property (assign)int       Rank;
 @property (assign)int       DrinkState;
 @property (assign)NSString *ReviewText;

@@ -2,7 +2,7 @@
 //  Ale.m
 //  BelgianBeer
 //
-//  Created by 秀典 細野 on 11/10/16.
+//  Created by Amatsu on 11/10/16.
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
@@ -17,7 +17,7 @@
 @synthesize AleKanaName;
 @synthesize AleExplanation;
 @synthesize AleImage;
-@synthesize StyleList;
+@synthesize AleStyleList;
 @synthesize Rank;
 @synthesize DrinkState;
 @synthesize ReviewText;
