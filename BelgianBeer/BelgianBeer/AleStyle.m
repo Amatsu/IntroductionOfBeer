@@ -28,4 +28,24 @@
     return self;
 }
 
+//全ての引数を持つinit
+- (id)initParameter:(int) sytleNo
+            styleId:(NSString *) styleId
+          styleName:(NSString *) name
+      styleKanaName:(NSString *) kanaName
+   styleExplanation:(NSString *) exp
+            aleList:(NSMutableArray *) aleList
+{
+ 
+    self._aleStyleNo = sytleNo;
+    self._aleStyleID = styleId;
+    self._aleStyleName = name;
+    self._aleStyleKanaName = kanaName;
+    self._aleStyleExplanation = exp;
+    self._aleList = aleList;
+    
+    //設定後に自身を返す
+    return self;
+}
+
 @end

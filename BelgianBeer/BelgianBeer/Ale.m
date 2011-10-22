@@ -44,7 +44,8 @@
           styleList:(NSMutableArray *) styleList
                rank:(int) rank
          drinkState:(int) drinkState
-             review:(NSString *) review {
+             review:(NSString *) review
+{
     
     self._aleNo = aleNo;
     self._aleID = aleId;
