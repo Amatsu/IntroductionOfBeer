@@ -9,20 +9,20 @@
 #import <Foundation/Foundation.h>
 
 @interface AleStyle : NSObject{
-    int       AleSytleNo;
-    NSString *AleSytleID;
-    NSString *AleSytleName;
-    NSString *AleSytleKanaName;
-    NSString *AleSytleExplanation;
+    int       _aleSytleNo;
+    NSString* _aleSytleID;
+    NSString* _aleSytleName;
+    NSString* _aleSytleKanaName;
+    NSString* _aleSytleExplanation;
     NSMutableArray *AleList;
 }
 
-@property (assign)int AleStyleNo;
-@property (assign)NSString *AleStyleID;
-@property (assign)NSString *AleStyleName;
-@property (assign)NSString *AleStyleKanaName;
-@property (assign)NSString *AleStyleExplanation;
-@property (assign)NSMutableArray *AleList;
+@property (assign)int _aleStyleNo;
+@property (assign)NSString* _aleStyleID;
+@property (assign)NSString* _aleStyleName;
+@property (assign)NSString* _aleStyleKanaName;
+@property (assign)NSString* _aleStyleExplanation;
+@property (assign)NSMutableArray* _aleList;
 
 
 @end

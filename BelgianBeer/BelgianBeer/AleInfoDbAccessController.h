@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+//DBから情報を取得する
 @interface AleInfoDbAccessController : NSObject
+
+//A-Z順でAle一覧を返すメソッド
+-(NSMutableArray *) getAleList_SortByAtoZ;
+
+//Style順でAle一覧を返すメソッド
+-(NSMutableArray *) getAleList_SortByStyle;
 
 @end

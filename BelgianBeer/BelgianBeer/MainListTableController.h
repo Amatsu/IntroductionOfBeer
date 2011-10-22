@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Foundation/NSArray.h>
 #import "BeerCell.h"
 
 @interface MainListTableController : UITableViewController{
