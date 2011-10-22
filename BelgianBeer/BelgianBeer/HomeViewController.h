@@ -22,6 +22,6 @@
 
 
 //AtoZSort
--(IBAction)showAleList:(id)sender;
+-(IBAction)showAleListAtoZSort:(id)sender;
 
 @end

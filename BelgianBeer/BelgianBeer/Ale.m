@@ -34,7 +34,7 @@
 }
 
 //全ての引数を持つinit
-- (id)initParameter:(int)aleNo
+- (id)initParameter:(int)no
                aleId:(NSString *) aleId
              aleName:(NSString *) name
          aleKanaName:(NSString *) kanaName
@@ -46,7 +46,7 @@
              review:(NSString *) review
 {
     
-    aleNo = aleNo;
+    aleNo = no;
     aleID = aleId;
     aleName = name;
     aleKanaName = kanaName;

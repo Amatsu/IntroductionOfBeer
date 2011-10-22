@@ -28,6 +28,8 @@
 		011987461426F90C0063A482 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0119873F1426F90C0063A482 /* Icon.png */; };
 		011987471426F90C0063A482 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011987401426F90C0063A482 /* Icon@2x.png */; };
 		01260F77144A6D9800A5A560 /* Ale.m in Sources */ = {isa = PBXBuildFile; fileRef = 01260F76144A6D9800A5A560 /* Ale.m */; };
+		0127B9C8145325700015EDDE /* AtoZSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0127B9C6145325700015EDDE /* AtoZSortViewController.m */; };
+		0127B9C9145325700015EDDE /* AtoZSortViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0127B9C7145325700015EDDE /* AtoZSortViewController.xib */; };
 		0176F70D141635F400018748 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F70C141635F400018748 /* UIKit.framework */; };
 		0176F70F141635F400018748 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F70E141635F400018748 /* Foundation.framework */; };
 		0176F711141635F400018748 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176F710141635F400018748 /* CoreGraphics.framework */; };
@@ -97,6 +99,9 @@
 		011987401426F90C0063A482 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		01260F75144A6D9800A5A560 /* Ale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ale.h; sourceTree = "<group>"; };
 		01260F76144A6D9800A5A560 /* Ale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ale.m; sourceTree = "<group>"; };
+		0127B9C5145325700015EDDE /* AtoZSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtoZSortViewController.h; sourceTree = "<group>"; };
+		0127B9C6145325700015EDDE /* AtoZSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtoZSortViewController.m; sourceTree = "<group>"; };
+		0127B9C7145325700015EDDE /* AtoZSortViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AtoZSortViewController.xib; sourceTree = "<group>"; };
 		0176F708141635F400018748 /* BelgianBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BelgianBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0176F70C141635F400018748 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0176F70E141635F400018748 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -204,6 +209,16 @@
 				01E988AB144A7AE60099CA86 /* AleInfoDbAccessController.m */,
 			);
 			name = DbController;
+			sourceTree = "<group>";
+		};
+		0127B9C3145323E10015EDDE /* AleListView */ = {
+			isa = PBXGroup;
+			children = (
+				0127B9C5145325700015EDDE /* AtoZSortViewController.h */,
+				0127B9C6145325700015EDDE /* AtoZSortViewController.m */,
+				0127B9C7145325700015EDDE /* AtoZSortViewController.xib */,
+			);
+			name = AleListView;
 			sourceTree = "<group>";
 		};
 		01723763141B282200C4C690 /* images */ = {
@@ -360,6 +375,7 @@
 		0176F79D1416584B00018748 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0127B9C3145323E10015EDDE /* AleListView */,
 				0103228614420E1C00D970AE /* TopNaviController.h */,
 				0103228714420E1D00D970AE /* TopNaviController.m */,
 				0103228814420E1E00D970AE /* TopNaviController.xib */,
@@ -458,6 +474,7 @@
 				010322851441ADE900D970AE /* HomeViewController.xib in Resources */,
 				0103228A14420E1F00D970AE /* TopNaviController.xib in Resources */,
 				010322901442169E00D970AE /* SearchViewController.xib in Resources */,
+				0127B9C9145325700015EDDE /* AtoZSortViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +528,7 @@
 				01260F77144A6D9800A5A560 /* Ale.m in Sources */,
 				01E988A5144A77140099CA86 /* AleStyle.m in Sources */,
 				01E988AC144A7AE60099CA86 /* AleInfoDbAccessController.m in Sources */,
+				0127B9C8145325700015EDDE /* AtoZSortViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "MainListTableController.h"
+#import "AtoZSortViewController.h"
 
 @implementation HomeViewController
 
@@ -32,9 +33,9 @@
 }
 
 //AleListをClick
--(IBAction)showAleList:(id)sender{
+-(IBAction)showAleListAtoZSort:(id)sender{
     
-    MainListTableController *tableViewController = [[MainListTableController alloc] init];
+    AtoZSortViewController *tableViewController = [[AtoZSortViewController alloc] init];
     tableViewController.aleInfoDbCtrl  = aleInfoDbCtrl;
     [self.navigationController pushViewController:tableViewController animated:YES];
     [tableViewController release];
