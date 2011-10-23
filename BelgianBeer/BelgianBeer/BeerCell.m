@@ -52,10 +52,6 @@
         [styelStr appendString:tmpStyle.aleStyleName];
     }
     [self.lblStyleName setText:[styelStr substringFromIndex:2]];
-
-//    for (i=0; i<self.dspAle.aleStyleList.count-1; i++) {
-//        [styelStr appendString:[[self.dspAle.aleStyleList objectAtIndex:i] aleStyleName]];
-//    }
     
     int i;
     NSMutableString *rankStr = [NSMutableString string];

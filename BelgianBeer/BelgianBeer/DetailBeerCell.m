@@ -8,6 +8,7 @@
 
 #import "DetailBeerCell.h"
 #import "Ale.h"
+#import "AleStyle.h"
 
 @implementation DetailBeerCell
 
@@ -40,7 +41,13 @@
     [self.lblName setText:self.dspAle.aleName];
     [self.lblKanaName setText:self.dspAle.aleKanaName];
     [self.imgAleView setImage:self.dspAle.aleImage];
-    [self.lblStyleName setText:@"test"];
+    NSMutableString *styelStr = [NSMutableString string];
+    for (AleStyle *tmpStyle in self.dspAle.aleStyleList) {
+        [styelStr appendString:@", "];
+        [styelStr appendString:tmpStyle.aleStyleName];
+    }
+    [self.lblStyleName setText:[styelStr substringFromIndex:2]];
+
 }
 
 @end
