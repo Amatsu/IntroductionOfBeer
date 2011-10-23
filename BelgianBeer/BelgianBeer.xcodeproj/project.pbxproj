@@ -214,6 +214,7 @@
 		0127B9C3145323E10015EDDE /* AleListView */ = {
 			isa = PBXGroup;
 			children = (
+				0176F780141641F800018748 /* DetailView */,
 				0127B9C5145325700015EDDE /* AtoZSortViewController.h */,
 				0127B9C6145325700015EDDE /* AtoZSortViewController.m */,
 				0127B9C7145325700015EDDE /* AtoZSortViewController.xib */,
@@ -326,6 +327,9 @@
 				01B2B1B01428D1B700263745 /* ShareCell.h */,
 				01B2B1B11428D1B700263745 /* ShareCell.m */,
 				01B2B1B31428D31D00263745 /* ShareCell.xib */,
+				01032264143833A100D970AE /* BeerCell.h */,
+				01032265143833A200D970AE /* BeerCell.m */,
+				010322621438302400D970AE /* BeerCell.xib */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -333,13 +337,9 @@
 		0176F7811416421500018748 /* MainListView */ = {
 			isa = PBXGroup;
 			children = (
-				0176F780141641F800018748 /* DetailView */,
 				0176F77614163FC000018748 /* MainListTableController.h */,
 				0176F77714163FC000018748 /* MainListTableController.m */,
 				0176F77814163FC000018748 /* MainListTableController.xib */,
-				01032264143833A100D970AE /* BeerCell.h */,
-				01032265143833A200D970AE /* BeerCell.m */,
-				010322621438302400D970AE /* BeerCell.xib */,
 			);
 			name = MainListView;
 			sourceTree = "<group>";

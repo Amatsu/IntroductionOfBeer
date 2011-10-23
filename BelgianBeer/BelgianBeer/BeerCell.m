@@ -14,6 +14,9 @@
 @synthesize lblName;
 @synthesize lblKanaName;
 @synthesize imgBeerView;
+@synthesize lblStyleName;
+@synthesize lblRank;
+@synthesize lblState;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -32,18 +35,42 @@
 }
 
 //名称を表示
--(void)setBeerName:(NSString *)name{
+-(void)setName:(NSString *)name{
     [self.lblName setText:name];
 }
 
 //カナ名称を表示
--(void)setBeerKanaName:(NSString *)name{
+-(void)setKanaName:(NSString *)name{
     [self.lblKanaName setText:name];
 }
 
 //ビールイメージを設定
--(void)setBeerImage:(UIImage *)img{
+-(void)setMiniImage:(UIImage *)img{
     [self.imgBeerView setImage:img];
+}
+
+//スタイル名称を表示
+-(void)setStyleName:(NSString *)name{
+    [self.lblStyleName setText:name];
+}
+
+//ランクを表示
+-(void)setRank:(int)rank{
+    int i = rank;
+    NSMutableString *rankStr = [NSMutableString string];
+    for (i=0; i<rank; i++) {
+        [rankStr appendString:@"★"];
+    }
+    [self.lblRank setText:rankStr];
+}
+
+//Stateを表示
+-(void)setState:(int)state{
+    if (state == 1) {
+        [self.lblState setText:@"Complate!"];
+    }else{
+        [self.lblState setText:@"NoComp..."];
+    }
 }
 
 @end

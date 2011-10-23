@@ -127,15 +127,22 @@
         [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
         
         //名称を設定
-        [beerCell setBeerName:[[aleList objectAtIndex:indexPath.row] aleName]];
+        [beerCell setName:[[aleList objectAtIndex:indexPath.row] aleName]];
         
         //カナ名称を設定
-        [beerCell setBeerKanaName:[[aleList objectAtIndex:indexPath.row] aleKanaName]];
+        [beerCell setKanaName:[[aleList objectAtIndex:indexPath.row] aleKanaName]];
         
         //Style名称を設定
+        //[beerCell setStyleName:[[aleList objectAtIndex:indexPath.row] aleKanaName]];
+        
+        //ランクを設定
+        [beerCell setRank:[[aleList objectAtIndex:indexPath.row] rank]];
+        
+        //Stateを設定
+        [beerCell setState:[[aleList objectAtIndex:indexPath.row] drinkState]];
         
         //画像を設定
-        [beerCell setBeerImage:[[aleList objectAtIndex:indexPath.section] aleMiniImage]];
+        [beerCell setMiniImage:[[aleList objectAtIndex:indexPath.section] aleMiniImage]];
         
         cell = beerCell;
         self.beerCell = nil;

@@ -12,14 +12,24 @@
     IBOutlet UILabel *lblName;
     IBOutlet UILabel *lblKanaName;
     IBOutlet UIImageView *imgBeerView;
+    IBOutlet UILabel *lblStyleName;
+    IBOutlet UILabel *lblRank;
+    IBOutlet UILabel *lblState;
 }
 
 @property (nonatomic, assign) UILabel *lblName;
 @property (nonatomic, assign) UILabel *lblKanaName;
 @property (nonatomic, assign) UIImageView *imgBeerView;
+@property (nonatomic, assign) UILabel *lblStyleName;
+@property (nonatomic, assign) UILabel *lblRank;
+@property (nonatomic, assign) UILabel *lblState;
 
--(void)setBeerName:(NSString*)name;
--(void)setBeerKanaName:(NSString*)name;
--(void)setBeerImage:(UIImage*)img;
+-(void)setName:(NSString*)name;
+-(void)setKanaName:(NSString*)name;
+-(void)setMiniImage:(UIImage*)img;
+-(void)setStyleName:(NSString*)name;
+-(void)setRank:(int)rank;
+-(void)setState:(int)state;
+
 
 @end
