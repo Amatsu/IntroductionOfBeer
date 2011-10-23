@@ -10,6 +10,7 @@
 
 @implementation DetailTableViewController
 
+@synthesize dspAle;
 @synthesize shareCell;
 @synthesize detailBeerCell;
 
@@ -118,13 +119,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    UITableViewCell *cell;
 
     //上から順に 0:詳細情報 1:説明 2:その他
-    
     if (indexPath.row == 0) {
-         
+        DetailBeerCell *cell;
         NSString *CellIdentifier = @"DetailBeerCell";
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
@@ -132,11 +130,15 @@
         if (cell == nil) {
             [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
             cell = detailBeerCell;
-            self.detailBeerCell = nil;
         }
+        [cell setAle:dspAle];
+        self.detailBeerCell = nil;
+        
+        return cell;
         
     }else if(indexPath.row == 1){
         
+        UITableViewCell *cell;
         NSString *CellIdentifier = @"Cell";
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
@@ -144,37 +146,12 @@
             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         }
         
-//        rect = CGRectMake(10, (60-50) / 2.0, 200, 200);
-//        UIImageView *imageView1;
-//        imageView1 = [[UIImageView alloc] initWithFrame:rect];
-//        [imageView1 setImage:[[UIImage imageNamed:@"6-12AM.png"] retain]];
-//        
-//        rect = CGRectMake(210, (60-50) / 2.0, 200, 200);
-//        UIImageView *imageView2;
-//        imageView2 = [[UIImageView alloc] initWithFrame:rect];
-//        [imageView2 setImage:[[UIImage imageNamed:@"6-12PM.png"] retain]];
-//        
-//        rect = CGRectMake(10, (60-50) / 2.0, 200, 200);
-//        UIScrollView *scrollView;
-//        scrollView = [[UIScrollView alloc] initWithFrame:rect];
-//        [scrollView addSubview:imageView1];
-//        [scrollView addSubview:imageView2];
-//        scrollView.pagingEnabled = YES;
-//        scrollView.contentSize = CGSizeMake(200 * 2, scrollView.frame.size.height);
-//        scrollView.showsHorizontalScrollIndicator = NO;
-//        scrollView.showsVerticalScrollIndicator = NO;
-//        scrollView.backgroundColor = [UIColor blackColor];
-//        
-//        
-//        //セルのViewに追加
-//        [cell.contentView addSubview:scrollView];
-//        
-//        [imageView1 release];
-//        [imageView2 release];
-//        [scrollView release];
+        return cell;
+        
         
     }else if(indexPath.row == 2){
         
+        UITableViewCell *cell;
         NSString *CellIdentifier = @"ShareCell";
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
@@ -184,10 +161,11 @@
             cell = shareCell;
             self.shareCell = nil;
         }
-        
+     
+        return cell;
     }
-
-    return cell;
+    
+    return  nil;
 }
 
 /*

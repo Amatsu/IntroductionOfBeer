@@ -7,29 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Ale.h"
 
 @interface BeerCell : UITableViewCell{
+    Ale *dspAle;
     IBOutlet UILabel *lblName;
     IBOutlet UILabel *lblKanaName;
-    IBOutlet UIImageView *imgBeerView;
+    IBOutlet UIImageView *imgAleView;
     IBOutlet UILabel *lblStyleName;
     IBOutlet UILabel *lblRank;
     IBOutlet UILabel *lblState;
 }
 
+@property (assign) Ale *dspAle;
 @property (nonatomic, assign) UILabel *lblName;
 @property (nonatomic, assign) UILabel *lblKanaName;
-@property (nonatomic, assign) UIImageView *imgBeerView;
+@property (nonatomic, assign) UIImageView *imgAleView;
 @property (nonatomic, assign) UILabel *lblStyleName;
 @property (nonatomic, assign) UILabel *lblRank;
 @property (nonatomic, assign) UILabel *lblState;
 
--(void)setName:(NSString*)name;
--(void)setKanaName:(NSString*)name;
--(void)setMiniImage:(UIImage*)img;
--(void)setStyleName:(NSString*)name;
--(void)setRank:(int)rank;
--(void)setState:(int)state;
-
+-(void)setAle:(Ale *)wkAle;
 
 @end

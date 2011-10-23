@@ -218,6 +218,9 @@
 				0127B9C5145325700015EDDE /* AtoZSortViewController.h */,
 				0127B9C6145325700015EDDE /* AtoZSortViewController.m */,
 				0127B9C7145325700015EDDE /* AtoZSortViewController.xib */,
+				0176F77614163FC000018748 /* MainListTableController.h */,
+				0176F77714163FC000018748 /* MainListTableController.m */,
+				0176F77814163FC000018748 /* MainListTableController.xib */,
 			);
 			name = AleListView;
 			sourceTree = "<group>";
@@ -334,16 +337,6 @@
 			name = DetailView;
 			sourceTree = "<group>";
 		};
-		0176F7811416421500018748 /* MainListView */ = {
-			isa = PBXGroup;
-			children = (
-				0176F77614163FC000018748 /* MainListTableController.h */,
-				0176F77714163FC000018748 /* MainListTableController.m */,
-				0176F77814163FC000018748 /* MainListTableController.xib */,
-			);
-			name = MainListView;
-			sourceTree = "<group>";
-		};
 		0176F78B141648EC00018748 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,7 +374,6 @@
 				0103228814420E1E00D970AE /* TopNaviController.xib */,
 				0103228B1442167600D970AE /* SearchView */,
 				010322801441ADBA00D970AE /* HomeView */,
-				0176F7811416421500018748 /* MainListView */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -430,6 +422,9 @@
 /* Begin PBXProject section */
 		0176F6FF141635F400018748 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 0176F702141635F400018748 /* Build configuration list for PBXProject "BelgianBeer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -626,6 +621,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BelgianBeer/BelgianBeer-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "BelgianBeer/BelgianBeer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -637,6 +633,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BelgianBeer/BelgianBeer-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "BelgianBeer/BelgianBeer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -653,6 +650,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BelgianBeer/BelgianBeer-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "BelgianBeerTests/BelgianBeerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -670,6 +668,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BelgianBeer/BelgianBeer-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "BelgianBeerTests/BelgianBeerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

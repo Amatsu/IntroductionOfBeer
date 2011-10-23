@@ -25,6 +25,9 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
+        //タイトルを設定
+        self.title = NSLocalizedString(@"Ale一覧　A-Z順", @"AleList");
     }
     return self;
 }
@@ -127,23 +130,8 @@
         cell = self.beerCell;
     }
     
-    //名称を設定
-    [cell setName:[[aleList objectAtIndex:indexPath.row] aleName]];
-    
-    //カナ名称を設定
-    [cell setKanaName:[[aleList objectAtIndex:indexPath.row] aleKanaName]];
-    
-    //Style名称を設定
-    //[beerCell setStyleName:[[aleList objectAtIndex:indexPath.row] aleKanaName]];
-    
-    //ランクを設定
-    [cell setRank:[[aleList objectAtIndex:indexPath.row] rank]];
-    
-    //Stateを設定
-    [cell setState:[[aleList objectAtIndex:indexPath.row] drinkState]];
-    
-    //画像を設定
-    [cell setMiniImage:[[aleList objectAtIndex:indexPath.section] aleMiniImage]];
+    //表示するAleを設定
+    [cell setAle:[aleList objectAtIndex:indexPath.row]];
     
     self.beerCell = nil;
     
@@ -194,13 +182,12 @@
 {
     
     DetailTableViewController *detailView = [[DetailTableViewController alloc]init];
+    detailView.dspAle = [aleList objectAtIndex:indexPath.row];
     
     //詳細Viewを表示する。
     [self.navigationController pushViewController:detailView animated:YES];
     [detailView release];
     
-    //選択をおこなった行番号が取得できる。
-    //番号を元に別のViewをpush（呼び出す）
     
 }
 

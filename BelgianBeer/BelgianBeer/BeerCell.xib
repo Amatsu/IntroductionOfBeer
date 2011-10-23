@@ -51,7 +51,6 @@
 								<string key="NSFrame">{{237, 6}, {80, 100}}</string>
 								<reference key="NSSuperview" ref="159834204"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:541</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -177,7 +176,7 @@
 							<object class="IBUILabel" id="699623289">
 								<reference key="NSNextResponder" ref="159834204"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{4, 81}, {95, 21}}</string>
+								<string key="NSFrame">{{94, 81}, {95, 21}}</string>
 								<reference key="NSSuperview" ref="159834204"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="301765673"/>
@@ -4607,7 +4606,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 							<object class="IBUILabel" id="301765673">
 								<reference key="NSNextResponder" ref="159834204"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{103, 77}, {81, 21}}</string>
+								<string key="NSFrame">{{4, 79}, {81, 21}}</string>
 								<reference key="NSSuperview" ref="159834204"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="233567402"/>
@@ -4690,14 +4689,6 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">imgBeerView</string>
-						<reference key="source" ref="138663356"/>
-						<reference key="destination" ref="233567402"/>
-					</object>
-					<int key="connectionID">18</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">lblStyleName</string>
 						<reference key="source" ref="138663356"/>
 						<reference key="destination" ref="604144720"/>
@@ -4719,6 +4710,14 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<reference key="destination" ref="301765673"/>
 					</object>
 					<int key="connectionID">25</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">imgAleView</string>
+						<reference key="source" ref="138663356"/>
+						<reference key="destination" ref="233567402"/>
+					</object>
+					<int key="connectionID">26</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -4849,7 +4848,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">25</int>
+			<int key="maxID">26</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4861,7 +4860,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>imgBeerView</string>
+							<string>imgAleView</string>
 							<string>lblKanaName</string>
 							<string>lblName</string>
 							<string>lblRank</string>
@@ -4882,7 +4881,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>imgBeerView</string>
+							<string>imgAleView</string>
 							<string>lblKanaName</string>
 							<string>lblName</string>
 							<string>lblRank</string>
@@ -4892,7 +4891,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
-								<string key="name">imgBeerView</string>
+								<string key="name">imgAleView</string>
 								<string key="candidateClassName">UIImageView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
