@@ -314,7 +314,7 @@
             [getAleSql appendString:styleNo];
             [getAleSql appendString:@" ORDER BY ALE.ALE_NAME ASC "];
             
-            //NSLog(@"%@",getAleSql);
+            NSLog(@"%@",getAleSql);
             
             FMResultSet *ale_rs = [db executeQuery:getAleSql];
             

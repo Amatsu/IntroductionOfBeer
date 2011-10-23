@@ -124,34 +124,32 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
 	
 	static NSString *CellIdentifier = @"BeerCell";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	BeerCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
     //カスタムセル
     if (cell == nil) {
-        
         [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
-        
-        //名称を設定
-        [beerCell setName:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] aleName]];
-        
-        //カナ名称を設定
-        [beerCell setKanaName:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] aleKanaName]];
-        
-        //Style名称を設定
-//        [beerCell setStyleName:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] aleStyleName]];
-        
-        //Rankを設定
-        [beerCell setRank:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] rank]];
-        
-        //Stateを設定
-        [beerCell setState:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] drinkState]];
-        
-        //画像を設定
-        [beerCell setMiniImage:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] aleMiniImage]];
-        
-        cell = beerCell;
-        self.beerCell = nil;
+        cell = self.beerCell;
     }
+    //名称を設定
+    [cell setName:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] aleName]];
+        
+    //カナ名称を設定
+    [cell setKanaName:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] aleKanaName]];
+        
+    //Style名称を設定
+//        [cell setStyleName:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] aleStyleName]];
+        
+    //Rankを設定
+    [cell setRank:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] rank]];
+        
+    //Stateを設定
+    [cell setState:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] drinkState]];
+        
+    //画像を設定
+    [cell setMiniImage:[[[[styleList objectAtIndex:indexPath.section] aleList] objectAtIndex:indexPath.row] aleMiniImage]];
+        
+    self.beerCell = nil;
     
 	return cell;
 }

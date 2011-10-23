@@ -119,34 +119,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
 	
 	static NSString *CellIdentifier = @"BeerCell";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	
+	BeerCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
     //カスタムセル
     if (cell == nil) {
-        
-        [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
-        
-        //名称を設定
-        [beerCell setName:[[aleList objectAtIndex:indexPath.row] aleName]];
-        
-        //カナ名称を設定
-        [beerCell setKanaName:[[aleList objectAtIndex:indexPath.row] aleKanaName]];
-        
-        //Style名称を設定
-        //[beerCell setStyleName:[[aleList objectAtIndex:indexPath.row] aleKanaName]];
-        
-        //ランクを設定
-        [beerCell setRank:[[aleList objectAtIndex:indexPath.row] rank]];
-        
-        //Stateを設定
-        [beerCell setState:[[aleList objectAtIndex:indexPath.row] drinkState]];
-        
-        //画像を設定
-        [beerCell setMiniImage:[[aleList objectAtIndex:indexPath.section] aleMiniImage]];
-        
-        cell = beerCell;
-        self.beerCell = nil;
+        [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];        
+        cell = self.beerCell;
     }
+    
+    //名称を設定
+    [cell setName:[[aleList objectAtIndex:indexPath.row] aleName]];
+    
+    //カナ名称を設定
+    [cell setKanaName:[[aleList objectAtIndex:indexPath.row] aleKanaName]];
+    
+    //Style名称を設定
+    //[beerCell setStyleName:[[aleList objectAtIndex:indexPath.row] aleKanaName]];
+    
+    //ランクを設定
+    [cell setRank:[[aleList objectAtIndex:indexPath.row] rank]];
+    
+    //Stateを設定
+    [cell setState:[[aleList objectAtIndex:indexPath.row] drinkState]];
+    
+    //画像を設定
+    [cell setMiniImage:[[aleList objectAtIndex:indexPath.section] aleMiniImage]];
+    
+    self.beerCell = nil;
     
 	return cell;
 }
