@@ -110,9 +110,9 @@
     if (indexPath.row == 0) {
         return 120;
     }else if(indexPath.row == 1) {
-        return 250;
+        return 100;
     }else if(indexPath.row == 2) {
-        return 150;
+        return 140;
     };
     return 100;
 }
@@ -146,12 +146,18 @@
             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         }
         
+        CGRect txtViewSize = CGRectMake(0.0, 0.0, 320, 100);
+        UITextView *txtView = [[UITextView alloc]initWithFrame:txtViewSize];
+        [txtView setEditable:FALSE];
+        [txtView setText:self.dspAle.aleExplanation];
+        [cell addSubview:txtView];
+        
         return cell;
         
         
     }else if(indexPath.row == 2){
         
-        UITableViewCell *cell;
+        ShareCell *cell;
         NSString *CellIdentifier = @"ShareCell";
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
@@ -159,8 +165,9 @@
         if (cell == nil) {
             [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
             cell = shareCell;
-            self.shareCell = nil;
         }
+        [cell setAle:dspAle];
+        self.shareCell = nil;
      
         return cell;
     }

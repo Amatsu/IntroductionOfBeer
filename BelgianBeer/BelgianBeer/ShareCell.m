@@ -10,8 +10,9 @@
 
 @implementation ShareCell
 
+@synthesize dspAle;
+@synthesize lblRank;
 @synthesize btnShare;
-@synthesize btnComment;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -31,6 +32,19 @@
 
 - (void)dealloc {
     [super dealloc];
+}
+
+//Aleを設定
+-(void)setAle:(Ale *)wkAle{
+    self.dspAle = wkAle;
+    
+    int i;
+    NSMutableString *rankStr = [NSMutableString string];
+    for (i=0; i<self.dspAle.rank; i++) {
+        [rankStr appendString:@"★"];
+    }
+    [self.lblRank setText:rankStr];
+    
 }
 
 @end

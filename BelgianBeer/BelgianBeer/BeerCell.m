@@ -7,6 +7,7 @@
 //
 
 #import "BeerCell.h"
+#import "AleStyle.h"
 
 @implementation BeerCell
 
@@ -44,7 +45,17 @@
     [self.lblName setText:self.dspAle.aleName];
     [self.lblKanaName setText:self.dspAle.aleKanaName];
     [self.imgAleView setImage:self.dspAle.aleImage];
-    [self.lblStyleName setText:@"test"];
+    
+    NSMutableString *styelStr = [NSMutableString string];
+    for (AleStyle *tmpStyle in self.dspAle.aleStyleList) {
+        [styelStr appendString:@", "];
+        [styelStr appendString:tmpStyle.aleStyleName];
+    }
+    [self.lblStyleName setText:[styelStr substringFromIndex:2]];
+
+//    for (i=0; i<self.dspAle.aleStyleList.count-1; i++) {
+//        [styelStr appendString:[[self.dspAle.aleStyleList objectAtIndex:i] aleStyleName]];
+//    }
     
     int i;
     NSMutableString *rankStr = [NSMutableString string];
@@ -53,10 +64,16 @@
     }
     [self.lblRank setText:rankStr];
     
-    if (self.dspAle.drinkState == 1) {
-        [self.lblState setText:@"Complate!"];
+    if (self.dspAle.rank > 0) {
+        [self.lblState setTextColor:[UIColor greenColor]];
+        [self.lblState setText:@"✔Complate!"];
     }else{
+        [self.lblState setTextColor:[UIColor redColor]];
         [self.lblState setText:@"NoComp..."];
+    }
+    
+    if(self.dspAle.drinkState == 0){
+        self.backgroundView.backgroundColor =  [UIColor colorWithRed:0.0 green:0.5 blue:1.0 alpha:1.0];
     }
 }
 

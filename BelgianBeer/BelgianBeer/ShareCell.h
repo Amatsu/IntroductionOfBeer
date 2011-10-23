@@ -7,16 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Ale.h"
 @interface ShareCell : UITableViewCell{
-    
+    Ale *dspAle;
+    IBOutlet UILabel  *lblRank;
     IBOutlet UIButton *btnShare;
-    IBOutlet UIButton *btnCommnet;
     
 }
 
+@property (assign) Ale *dspAle;
+@property (nonatomic, assign) UILabel  *lblRank;
 @property (nonatomic, assign) UIButton *btnShare;
-@property (nonatomic, assign) UIButton *btnComment;
 
+-(void)setAle:(Ale *)wkAle;
 
 @end
