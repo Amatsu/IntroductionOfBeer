@@ -56,7 +56,7 @@
 		01A26BD4141C475D00A4740D /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A26BD2141C475D00A4740D /* DetailTableViewController.m */; };
 		01A26BD5141C475D00A4740D /* DetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A26BD3141C475D00A4740D /* DetailTableViewController.xib */; };
 		01B2B1B21428D1B700263745 /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B2B1B11428D1B700263745 /* ShareCell.m */; };
-		01B2B1B41428D31D00263745 /* ShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B2B1B31428D31D00263745 /* ShareCell.xib */; };
+		01BE69B6145529E80016D3A5 /* ShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BE69B8145529E80016D3A5 /* ShareCell.xib */; };
 		01E988A5144A77140099CA86 /* AleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E988A4144A77140099CA86 /* AleStyle.m */; };
 		01E988AC144A7AE60099CA86 /* AleInfoDbAccessController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E988AB144A7AE60099CA86 /* AleInfoDbAccessController.m */; };
 /* End PBXBuildFile section */
@@ -139,7 +139,7 @@
 		01A26BD3141C475D00A4740D /* DetailTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewController.xib; sourceTree = "<group>"; };
 		01B2B1B01428D1B700263745 /* ShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCell.h; sourceTree = "<group>"; };
 		01B2B1B11428D1B700263745 /* ShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCell.m; sourceTree = "<group>"; };
-		01B2B1B31428D31D00263745 /* ShareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareCell.xib; sourceTree = "<group>"; };
+		01BE69B7145529E80016D3A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ShareCell.xib; sourceTree = "<group>"; };
 		01E988A3144A77140099CA86 /* AleStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AleStyle.h; sourceTree = "<group>"; };
 		01E988A4144A77140099CA86 /* AleStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AleStyle.m; sourceTree = "<group>"; };
 		01E988AA144A7AE60099CA86 /* AleInfoDbAccessController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AleInfoDbAccessController.h; sourceTree = "<group>"; };
@@ -329,7 +329,7 @@
 				0103227C14388DEE00D970AE /* DetailBeerCell.xib */,
 				01B2B1B01428D1B700263745 /* ShareCell.h */,
 				01B2B1B11428D1B700263745 /* ShareCell.m */,
-				01B2B1B31428D31D00263745 /* ShareCell.xib */,
+				01BE69B8145529E80016D3A5 /* ShareCell.xib */,
 				01032264143833A100D970AE /* BeerCell.h */,
 				01032265143833A200D970AE /* BeerCell.m */,
 				010322621438302400D970AE /* BeerCell.xib */,
@@ -460,7 +460,7 @@
 				011987451426F90C0063A482 /* Icon-Small@2x.png in Resources */,
 				011987461426F90C0063A482 /* Icon.png in Resources */,
 				011987471426F90C0063A482 /* Icon@2x.png in Resources */,
-				01B2B1B41428D31D00263745 /* ShareCell.xib in Resources */,
+				01BE69B6145529E80016D3A5 /* ShareCell.xib in Resources */,
 				010322631438302400D970AE /* BeerCell.xib in Resources */,
 				0103226A1438448600D970AE /* Boon_Oude_Gueuze.png in Resources */,
 				0103226B1438448600D970AE /* Cantillon_Grand_Cru_Broucse.png in Resources */,
@@ -568,6 +568,14 @@
 				0176F73E141635F400018748 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		01BE69B8145529E80016D3A5 /* ShareCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01BE69B7145529E80016D3A5 /* en */,
+			);
+			name = ShareCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
